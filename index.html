@@ -13,7 +13,8 @@
   <script type='text/javascript' src=''></script>
   <script type='text/javascript' src='https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js'></script>
   <script type='text/javascript' src='https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js'></script>
-  <style type="text/css">
+  <style type="text/css"> 
+    /* ======= Scroll Bar ======= */
     /* width */
     ::-webkit-scrollbar {
       width: 10px;
@@ -52,7 +53,7 @@
             <a class="nav-link" href="gallery.html">Photos</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" aria-current="page" href="error-page.html">Achievements</a>
+            <a class="nav-link" aria-current="page" href="error-page.html">Projects</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" onclick="window.open('https://www.youtube.com/channel/UCGy8vwjgLsIl5c10_TAhGLA','_blank')">YouTube</a>
@@ -63,27 +64,27 @@
   </nav>
   <!-- ======= Carousel ======= -->
   <!-- ======= Image Size 1920x1080 ======= -->
-    <div id="main-carousel" class="carousel slide" data-bs-ride="carousel" data-bs-touch="true">
-      <div class="carousel-inner">
-        <div class="carousel-item active" data-bs-interval="5000">
-          <img src="IMAGES/carousel-images/carousel-image-1.jpg" class="d-block w-100" alt="...">
-        </div>
-        <div class="carousel-item" data-bs-interval="5000">
-          <img src="IMAGES/carousel-images/carousel-image-2.jpg" class="d-block w-100" alt="...">
-        </div>
-        <div class="carousel-item" data-bs-interval="5000">
-          <img src="IMAGES/carousel-images/carousel-image-3.jpg" class="d-block w-100" alt="...">
-        </div>
+  <div id="main-carousel" class="carousel slide" data-bs-ride="carousel" data-bs-touch="true">
+    <div class="carousel-inner">
+      <div class="carousel-item active" data-bs-interval="5000">
+        <img src="IMAGES/carousel-images/carousel-image-1.jpg" class="d-block w-100" alt="...">
       </div>
-      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-      </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-      </button>
+      <div class="carousel-item" data-bs-interval="5000">
+        <img src="IMAGES/carousel-images/carousel-image-2.jpg" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item" data-bs-interval="5000">
+        <img src="IMAGES/carousel-images/carousel-image-3.jpg" class="d-block w-100" alt="...">
+      </div>
     </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
   <div class="container">
     <!-- ======= About Section ======= -->
     <section id="about" class="about mb-4">
@@ -177,194 +178,195 @@
     </section>
     <!-- ======= Testimonial Section ======= -->
     <!-- ======= Testimonial Image Size - 300 px x 300 px ======= -->
-    <section id="testimonial" class="test-testimonial mb-4">
+    <section id="testimonial" class="testimonial mb-4">
       <div class="container mt-5 mb-5">
         <hr>
         <div class="section-title">
           <h2 class="text-center mt-3">Testimonials</h2>
           <hr>
         </div>
-      <div class="row">
-        <div class="col-12">
-          <div id="carouselExampleIndicators2" class="carousel slide" data-ride="carousel">
-            <div class="carousel-inner">
-              <div class="carousel-item active">
-                <div class="row">
-                  <div class="col-sm-4">
-                    <div class="card mb-3 p-3 border-0 text-center px-4">
-                      <div class="user-image">
-                        <img src="IMAGES/testimonial/testimonial-image-1.jpg" class="rounded-circle" width="80">
-                      </div>
-                      <div class="user-content">
-                        <h5 class="mb-0">Bruce Hardy</h5>
-                        <span>Software Developer</span>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                      </div>
-                      <div class="ratings">
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-sm-4">
-                    <div class="card mb-3 p-3 border-0 text-center px-4">
-                      <div class="user-image">
-                        <img src="IMAGES/testimonial/testimonial-image-2.jpg" class="rounded-circle" width="80">
-                      </div>
-                      <div class="user-content">
-                        <h5 class="mb-0">Mark Smith</h5>
-                        <span>Web Developer</span>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                      </div>
-                      <div class="ratings">
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
+        <div class="row">
+          <div class="col-12">
+            <div id="carouselExampleIndicators2" class="carousel slide" data-ride="carousel">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <div class="row">
+                    <div class="col-sm-4">
+                      <div class="card mb-3 p-3 border-0 text-center px-4">
+                        <div class="user-image">
+                          <img src="IMAGES/testimonial/testimonial-image-1.jpg" class="rounded-circle" width="80">
+                        </div>
+                        <div class="user-content">
+                          <h5 class="mb-0">Bruce Hardy</h5>
+                          <span>Software Developer</span>
+                          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                        </div>
+                        <div class="ratings">
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                  <div class="col-sm-4">
-                    <div class="card mb-1 p-3 border-0 text-center px-4">
-                      <div class="user-image">
-                        <img src="IMAGES/testimonial/testimonial-image-3.jpg" class="rounded-circle" width="80">
-                      </div>
-                      <div class="user-content">
-                        <h5 class="mb-0">Mark Smith</h5>
-                        <span>Web Developer</span>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                      </div>
-                      <div class="ratings">
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="carousel-item">
-                <div class="row">
-                  <div class="col-sm-4">
-                    <div class="card mb-3 p-3 border-0 text-center px-4">
-                      <div class="user-image">
-                        <img src="IMAGES/testimonial/testimonial-image-1.jpg" class="rounded-circle" width="80">
-                      </div>
-                      <div class="user-content">
-                        <h5 class="mb-0">Mark Smith</h5>
-                        <span>Web Developer</span>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                      </div>
-                      <div class="ratings">
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
+                    <div class="col-sm-4">
+                      <div class="card mb-3 p-3 border-0 text-center px-4">
+                        <div class="user-image">
+                          <img src="IMAGES/testimonial/testimonial-image-2.jpg" class="rounded-circle" width="80">
+                        </div>
+                        <div class="user-content">
+                          <h5 class="mb-0">Mark Smith</h5>
+                          <span>Web Developer</span>
+                          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                        </div>
+                        <div class="ratings">
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                  <div class="col-sm-4">
-                    <div class="card mb-3 p-3 border-0 text-center px-4">
-                      <div class="user-image">
-                        <img src="IMAGES/testimonial/testimonial-image-1.jpg" class="rounded-circle" width="80">
-                      </div>
-                      <div class="user-content">
-                        <h5 class="mb-0">Mark Smith</h5>
-                        <span>Web Developer</span>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                      </div>
-                      <div class="ratings">
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-sm-4">
-                    <div class="card mb-1 p-3 border-0 text-center px-4">
-                      <div class="user-image">
-                        <img src="IMAGES/testimonial/testimonial-image-1.jpg" class="rounded-circle" width="80">
-                      </div>
-                      <div class="user-content">
-                        <h5 class="mb-0">Mark Smith</h5>
-                        <span>Web Developer</span>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                      </div>
-                      <div class="ratings">
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
+                    <div class="col-sm-4">
+                      <div class="card mb-1 p-3 border-0 text-center px-4">
+                        <div class="user-image">
+                          <img src="IMAGES/testimonial/testimonial-image-3.jpg" class="rounded-circle" width="80">
+                        </div>
+                        <div class="user-content">
+                          <h5 class="mb-0">Mark Smith</h5>
+                          <span>Web Developer</span>
+                          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                        </div>
+                        <div class="ratings">
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
-              </div>
-              <div class="carousel-item">
-                <div class="row">
-                  <div class="col-sm-4">
-                    <div class="card mb-3 p-3 border-0 text-center px-4">
-                      <div class="user-image">
-                        <img src="IMAGES/testimonial/testimonial-image-1.jpg" class="rounded-circle" width="80">
+                <div class="carousel-item">
+                  <div class="row">
+                    <div class="col-sm-4">
+                      <div class="card mb-3 p-3 border-0 text-center px-4">
+                        <div class="user-image">
+                          <img src="IMAGES/testimonial/testimonial-image-1.jpg" class="rounded-circle" width="80">
+                        </div>
+                        <div class="user-content">
+                          <h5 class="mb-0">Mark Smith</h5>
+                          <span>Web Developer</span>
+                          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                        </div>
+                        <div class="ratings">
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                        </div>
                       </div>
-                      <div class="user-content">
-                        <h5 class="mb-0">Mark Smith</h5>
-                        <span>Web Developer</span>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    </div>
+                    <div class="col-sm-4">
+                      <div class="card mb-3 p-3 border-0 text-center px-4">
+                        <div class="user-image">
+                          <img src="IMAGES/testimonial/testimonial-image-1.jpg" class="rounded-circle" width="80">
+                        </div>
+                        <div class="user-content">
+                          <h5 class="mb-0">Mark Smith</h5>
+                          <span>Web Developer</span>
+                          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                        </div>
+                        <div class="ratings">
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                        </div>
                       </div>
-                      <div class="ratings">
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
+                    </div>
+                    <div class="col-sm-4">
+                      <div class="card mb-1 p-3 border-0 text-center px-4">
+                        <div class="user-image">
+                          <img src="IMAGES/testimonial/testimonial-image-1.jpg" class="rounded-circle" width="80">
+                        </div>
+                        <div class="user-content">
+                          <h5 class="mb-0">Mark Smith</h5>
+                          <span>Web Developer</span>
+                          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                        </div>
+                        <div class="ratings">
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                        </div>
                       </div>
                     </div>
                   </div>
-                  <div class="col-sm-4">
-                    <div class="card mb-3 p-3 border-0 text-center px-4">
-                      <div class="user-image">
-                        <img src="IMAGES/testimonial/testimonial-image-1.jpg" class="rounded-circle" width="80">
-                      </div>
-                      <div class="user-content">
-                        <h5 class="mb-0">Mark Smith</h5>
-                        <span>Web Developer</span>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                      </div>
-                      <div class="ratings">
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
+                </div>
+                <div class="carousel-item">
+                  <div class="row">
+                    <div class="col-sm-4">
+                      <div class="card mb-3 p-3 border-0 text-center px-4">
+                        <div class="user-image">
+                          <img src="IMAGES/testimonial/testimonial-image-1.jpg" class="rounded-circle" width="80">
+                        </div>
+                        <div class="user-content">
+                          <h5 class="mb-0">Mark Smith</h5>
+                          <span>Web Developer</span>
+                          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                        </div>
+                        <div class="ratings">
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                  <div class="col-sm-4">
-                    <div class="card mb-1 p-3 border-0 text-center px-4">
-                      <div class="user-image">
-                        <img src="IMAGES/testimonial/testimonial-image-1.jpg" class="rounded-circle" width="80">
+                    <div class="col-sm-4">
+                      <div class="card mb-3 p-3 border-0 text-center px-4">
+                        <div class="user-image">
+                          <img src="IMAGES/testimonial/testimonial-image-1.jpg" class="rounded-circle" width="80">
+                        </div>
+                        <div class="user-content">
+                          <h5 class="mb-0">Mark Smith</h5>
+                          <span>Web Developer</span>
+                          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                        </div>
+                        <div class="ratings">
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                        </div>
                       </div>
-                      <div class="user-content">
-                        <h5 class="mb-0">Mark Smith</h5>
-                        <span>Web Developer</span>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                      </div>
-                      <div class="ratings">
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
+                    </div>
+                    <div class="col-sm-4">
+                      <div class="card mb-1 p-3 border-0 text-center px-4">
+                        <div class="user-image">
+                          <img src="IMAGES/testimonial/testimonial-image-1.jpg" class="rounded-circle" width="80">
+                        </div>
+                        <div class="user-content">
+                          <h5 class="mb-0">Mark Smith</h5>
+                          <span>Web Developer</span>
+                          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                        </div>
+                        <div class="ratings">
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -372,59 +374,58 @@
               </div>
             </div>
           </div>
-        </div>
-        <!--Mini-Carousel Buttons-->
-        <div class="mt-5 position-relative">
-          <div class="position-absolute top-50 start-50 translate-middle">
-            <a class="btn btn-primary" href="#carouselExampleIndicators2" role="button" data-slide="prev">
-              <i class="bi bi-caret-left-fill"></i>
-            </a>
-            <a class="btn btn-primary" href="#carouselExampleIndicators2" role="button" data-slide="next">
-              <i class="bi bi-caret-right-fill"></i>
-            </a>
+          <!--Mini-Carousel Buttons-->
+          <div class="mt-5 position-relative">
+            <div class="position-absolute top-50 start-50 translate-middle">
+              <a class="btn btn-primary" href="#carouselExampleIndicators2" role="button" data-slide="prev">
+                <i class="bi bi-caret-left-fill"></i>
+              </a>
+              <a class="btn btn-primary" href="#carouselExampleIndicators2" role="button" data-slide="next">
+                <i class="bi bi-caret-right-fill"></i>
+              </a>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
-  </div>
-  <!--Footer-->
-  <footer class="bg-dark text-center text-white">
-    <div class="container p-4 pb-0">
-      <!-- Section: Social media -->
-      <section class="mb-4">
-        <!-- Facebook -->
-        <a class="btn btn-outline-light btn-floating m-1 border border-0" onclick="window.open('https://www.facebook.com/profile.php?id=100088289332716','_blank')" role="button"><i class="bi bi-facebook"></i></a>
-
-        <!-- Twitter -->
-        <a class="btn btn-outline-light btn-floating m-1 border border-0" onclick="window.open('https://twitter.com/meghthebaadal','_blank')" role="button"><i class="bi bi-twitter"></i></a>
-
-        <!-- Instagram -->
-        <a class="btn btn-outline-light btn-floating m-1 border border-0" onclick="window.open('https://www.instagram.com/megh_vekaria','_blank')" role="button"><i class="bi bi-instagram"></i></a>
-
-        <!-- Linkedin -->
-        <a class="btn btn-outline-light btn-floating m-1 border border-0" onclick="window.open('https://www.linkedin.com/in/megh-patel-7838a1229/','_blank')" role="button"><i class="bi bi-linkedin"></i></a>
-
-        <!-- Github -->
-        <a class="btn btn-outline-light btn-floating m-1 border border-0" onclick="window.open('https://github.com/MeGH2711 ','_blank')" role="button"><i class="bi bi-github"></i></a>
-
-        <!-- Youtube -->
-        <a class="btn btn-outline-light btn-floating m-1 border border-0" onclick="window.open('https://www.youtube.com/channel/UCGy8vwjgLsIl5c10_TAhGLA','_blank')" role="button"><i class="bi bi-youtube"></i></a>
-
       </section>
-      <!-- Section: Social media -->
     </div>
-    <!-- Grid container -->
+    <!--Footer-->
+    <footer class="bg-dark text-center text-white">
+      <div class="container p-4 pb-0">
+        <!-- Section: Social media -->
+        <section class="mb-4">
+          <!-- Facebook -->
+          <a class="btn btn-outline-light btn-floating m-1 border border-0" onclick="window.open('https://www.facebook.com/profile.php?id=100088289332716','_blank')" role="button"><i class="bi bi-facebook"></i></a>
 
-    <!-- Copyright -->
-    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
-      Copyright © 2023 Megh Patel. All rights reserved.
-    </div>
-    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
-      Website Under Construction not ready for Launch
-    </div>
-    <!-- Copyright -->
-  </footer>
-  <!--Javascript-->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous"></script>
-</body>
-</html>
+          <!-- Twitter -->
+          <a class="btn btn-outline-light btn-floating m-1 border border-0" onclick="window.open('https://twitter.com/meghthebaadal','_blank')" role="button"><i class="bi bi-twitter"></i></a>
+
+          <!-- Instagram -->
+          <a class="btn btn-outline-light btn-floating m-1 border border-0" onclick="window.open('https://www.instagram.com/megh_vekaria','_blank')" role="button"><i class="bi bi-instagram"></i></a>
+
+          <!-- Linkedin -->
+          <a class="btn btn-outline-light btn-floating m-1 border border-0" onclick="window.open('https://www.linkedin.com/in/megh-patel-7838a1229/','_blank')" role="button"><i class="bi bi-linkedin"></i></a>
+
+          <!-- Github -->
+          <a class="btn btn-outline-light btn-floating m-1 border border-0" onclick="window.open('https://github.com/MeGH2711 ','_blank')" role="button"><i class="bi bi-github"></i></a>
+
+          <!-- Youtube -->
+          <a class="btn btn-outline-light btn-floating m-1 border border-0" onclick="window.open('https://www.youtube.com/channel/UCGy8vwjgLsIl5c10_TAhGLA','_blank')" role="button"><i class="bi bi-youtube"></i></a>
+
+        </section>
+        <!-- Section: Social media -->
+      </div>
+      <!-- Grid container -->
+
+      <!-- Copyright -->
+      <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+        Copyright © 2023 Megh Patel. All rights reserved.
+      </div>
+      <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+        Website Under Construction not ready for Launch
+      </div>
+      <!-- Copyright -->
+    </footer>
+    <!--Javascript-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous"></script>
+  </body>
+  </html>
