@@ -124,7 +124,25 @@
       </div>
     </div>
     <div class="container" style="justify-content: center; align-items: center; display: flex;">
-      <button type="submit" class="btn btn-primary mb-3" onclick="SendMail();">Submit Reponse</button>
+      <button type="submit" class="btn btn-primary mb-3" onclick="SendMail();" data-bs-toggle="modal"
+        data-bs-target="#exampleModal">Submit Reponse</button>
+    </div>
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">Contact Us</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            Thank you for your message! I'll reach out to you soon.
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Ok</button>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
   <!-- ======= Footer ======= -->
