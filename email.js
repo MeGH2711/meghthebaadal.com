@@ -18,7 +18,9 @@ function SendMail() {
             document.getElementById("subject").value = "";
             document.getElementById("message").value = "";
             console.log(res);
-
+            // Show the modal
+            var modal = new bootstrap.Modal(document.getElementById("exampleModal"));
+            modal.show();
         })
         .catch(err => console.log(err));
 }
