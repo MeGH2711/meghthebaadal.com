@@ -32,12 +32,18 @@
 
     /* Add a class for the loader on state */
     #loader-on {
+      opacity: 1;
       display: block;
+      transition: opacity 0.5s ease-in-out;
+      /* Add a transition for smoother fading */
     }
 
-    /* Hide the content initially */
     #loader-off {
+      opacity: 0;
       display: none;
+      /* Disable interactions while invisible */
+      transition: opacity 0.5s ease-in-out;
+      /* Add a transition for smoother fading */
     }
   </style>
   <!-- CSS Stylesheet End -->
@@ -55,8 +61,7 @@
 </head>
 
 <body>
-  <div id="loader-on"
-    style="display: flex; justify-content: center; align-items: center; height: 100vh;">
+  <div id="loader-on" style="display: flex; justify-content: center; align-items: center; height: 100vh;">
     <div class="spinner">
       <div></div>
       <div></div>
