@@ -61,46 +61,52 @@
     <h2 class="h1 font-weight-bold text-center my-4">Contact Me</h2>
     <p class="text-center mx-auto mb-5">Do you have any questions? Please do not hesitate to contact me directly. I will
       come back to you within a matter of hours to help you and clear your doubts.</p>
-    <div class="row mb-3">
-      <div class="col">
-        <div class="form-floating">
-          <input type="name" class="form-control" id="name" placeholder="name">
-          <label for="name">Name</label>
-        </div>
-      </div>
-      <div class="col">
-        <div class="input-group mb-3">
-          <span class="input-group-text"><i class="bi bi-envelope"></i></span>
+    <div class="row d-flex justify-content-center">
+      <div class="row my-3">
+        <div class="col">
           <div class="form-floating">
-            <input type="email" class="form-control" id="email" placeholder="Email">
-            <label for="email">Email ID</label>
+            <input type="name" class="form-control" id="name" placeholder="name">
+            <label for="name">Name</label>
           </div>
         </div>
       </div>
-    </div>
-    <div class="col mb-4">
-      <div class="form-floating">
-        <input type="text" class="form-control" id="phone" placeholder="Phone Number">
-        <label for="phone">Phone Number</label>
-      </div>
-    </div>
-    <div class="row mb-3">
-      <div class="col">
-        <div class="form-floating mb-3">
-          <input type="text" class="form-control" id="subject" placeholder="Subject">
-          <label for="subject">Subject</label>
+      <div class="row my-3">
+        <div class="col">
+          <div class="input-group">
+            <span class="input-group-text"><i class="bi bi-envelope"></i></span>
+            <div class="form-floating">
+              <input type="email" class="form-control" id="email" placeholder="Email">
+              <label for="email">Email ID</label>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="row mb-3">
-      <div class="col">
-        <div class="form-floating">
-          <textarea class="form-control" placeholder="Leave a comment here" id="message"
-            style="height: 100px"></textarea>
-          <label for="message">Message</label>
+      <div class="row my-3">
+        <div class="col">
+          <div class="form-floating">
+            <input type="text" class="form-control" id="phone" placeholder="Phone Number">
+            <label for="phone">Phone Number</label>
+          </div>
         </div>
       </div>
-    </div>
+      <div class="row my-3">
+        <div class="col">
+          <div class="form-floating">
+            <input type="text" class="form-control" id="subject" placeholder="Subject">
+            <label for="subject">Subject</label>
+          </div>
+        </div>
+      </div>
+      <div class="row my-3">
+        <div class="col">
+          <div class="form-floating">
+            <textarea class="form-control" placeholder="Leave a comment here" id="message"
+              style="height: 100px"></textarea>
+            <label for="message">Message</label>
+          </div>
+        </div>
+      </div>  
+    </div>  
     <div class="container" style="justify-content: center; align-items: center; display: flex;">
       <button type="submit" class="btn btn-primary mb-3" onclick="SendMail();" data-bs-toggle="modal"
         data-bs-target="#exampleModal" id="liveToastBtn">Submit Reponse</button>
