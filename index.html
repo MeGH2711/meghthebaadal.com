@@ -45,6 +45,77 @@
       transition: opacity 0.5s ease-in-out;
       /* Add a transition for smoother fading */
     }
+
+    .scroller {
+      white-space: nowrap;
+      overflow-x: hidden;
+      overflow-y: hidden;
+    }
+
+    .scroller .scroller-in {
+      display: inline-block;
+      white-space: nowrap;
+      animation-name: scroll;
+      animation-duration: 30s;
+      animation-timing-function: linear;
+      animation-iteration-count: infinite;
+    }
+
+    .scroller h4 {
+      display: inline-block;
+      margin: 50px 15px;
+      font-size: 130px;
+      font-weight: 700;
+      -webkit-text-stroke: 1.5px var(--theme);
+    }
+
+    .hollow-text {
+      transition: all 0.3s ease;
+      /* Set the initial text color */
+    }
+
+    /* Style on hover to make the text hollow */
+    .hollow-text:hover {
+      color: transparent;
+      /* Make the text transparent */
+      -webkit-text-stroke: 2px #ADB5BD;
+      /* Add an outline/stroke to the text (webkit prefix for some browsers) */
+    }
+
+    @keyframes scroll {
+      from {
+        transform: translateX(0);
+      }
+
+      to {
+        transform: translateX(-100%);
+      }
+    }
+
+    .timeline {
+      border-left: 1px solid hsl(0, 0%, 90%);
+      position: relative;
+      list-style: none;
+    }
+
+    .timeline .timeline-item {
+      position: relative;
+    }
+
+    .timeline .timeline-item:after {
+      position: absolute;
+      display: block;
+      top: 0;
+    }
+
+    .timeline .timeline-item:after {
+      background-color: hsl(0, 0%, 90%);
+      left: -38px;
+      border-radius: 50%;
+      height: 11px;
+      width: 11px;
+      content: "";
+    }
   </style>
   <!-- CSS Stylesheet End -->
 
@@ -132,7 +203,28 @@
         </div>
       </div>
     </div>
-
+    <div class="scroller">
+      <div class="scroller-in">
+        <h4 class="hollow-text">Web Developer</h4>
+        <h4>|</h4>
+        <h4 class="hollow-text">UI/UX Designer</h4>
+        <h4>|</h4>
+        <h4 class="hollow-text">Front End Developer</h4>
+        <h4>|</h4>
+        <h4 class="hollow-text">Anchor</h4>
+        <h4>|</h4>
+      </div>
+      <div class="scroller-in">
+        <h4 class="hollow-text">Web Developer</h4>
+        <h4>|</h4>
+        <h4 class="hollow-text">UI/UX Designer</h4>
+        <h4>|</h4>
+        <h4 class="hollow-text">Front End Developer</h4>
+        <h4>|</h4>
+        <h4 class="hollow-text">Anchor</h4>
+        <h4>|</h4>
+      </div>
+    </div>
     <div class="container">
       <!-- ======= About Section ======= -->
       <section id="about" class="about mb-4">
@@ -365,21 +457,27 @@
             <hr>
             <h2 class="text-center mt-3">Education</h2>
             <hr>
-            <p>Due to my previous residence in Pune, Maharashtra, I completed my pre-primary schooling at <a
-                style="font-weight: bold;" onclick="window.open('https://www.arnoldcentralschool.org/','_blank')">St.
-                Arnold's Central School, Pune</a>. Later on, I completed my further primary education at <a
-                style="font-weight: bold;" onclick="window.open('https://www.anandniketanshilaj.org/','_blank')">Anand
-                Niketan, Shilaj, Ahmedabad</a>. After that, I completed my higher secondary education at <a
-                style="font-weight: bold;"
-                onclick="window.open('https://infocityschoolsargasan.edu.in/','_blank')">Infocity Junior Science
-                College,
-                Sargasan, Gandhinagar</a>.</p>
           </div>
-          <div class="row">
-            <p class="fst-italic">
-              During my Primary and Secondary Education, I gained basic skills and nurtured many of my hobbies and got
-              my intrest in the field I am intrested in.
-            </p>
+          <div class="container px-3">
+            <ul class="timeline">
+              <li class="timeline-item mb-5">
+                <h5 class="fw-bold">Bachelor of Engineering (B.E.)</h5>
+                <p class="text-muted mb-2 fw-bold">October 2021 - 2025 (Expected)</p>
+                <p class="text-muted">
+                  I am currently working towards my Bachelor of Engineering degree in Computer Engineering at
+                  <b>Gandhinagar Institute of Technology (Now Under Gandhinagar University) - Kalol, Gandhinagar</b>.
+                  Throughout my academic
+                  journey, I have gained valuable knowledge in various areas of computer engineering. I have had the
+                  opportunity to delve into subjects such as digital logic design, programming languages including Java,
+                  Python, C, and others. This diverse curriculum,
+                  combined with hands-on projects, collaborative learning experiences, and exposure to industry trends,
+                  has not only deepened my passion for computer engineering but also equipped me with technical skills
+                  and a problem-solving mindset. I am confident that my education is preparing me for a successful and
+                  rewarding career in this dynamic field.
+                </p>
+              </li>
+              <!-- Add More if needed from first li tag -->
+            </ul>
           </div>
         </div>
       </section>
