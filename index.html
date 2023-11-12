@@ -134,9 +134,7 @@
 
 <body>
   <div id="loader-on" style="display: flex; justify-content: center; align-items: center; height: 100vh;">
-    <div class="spinner">
-      <div></div>
-      <div></div>
+    <div class="lds-roller">
       <div></div>
       <div></div>
       <div></div>
@@ -201,7 +199,8 @@
         </div>
         <div class="col-md-6 d-none d-lg-block p-0">
           <img src="IMAGES/index-page/sample.png" class="float-end"
-            style="filter: drop-shadow(2px 5px 10px rgba(116, 116, 116, 0.2));">
+            style="filter: drop-shadow(2px 5px 10px rgba(116, 116, 116, 0.2));" oncontextmenu="return false;"
+            draggable="false">
         </div>
       </div>
     </div>
@@ -243,7 +242,8 @@
           </div>
           <div class="row">
             <div class="col-lg-4">
-              <img src="IMAGES/index-page/about-page.jpg" class="img-fluid rounded-3 enlarge">
+              <img src="IMAGES/index-page/about-page.jpg" class="img-fluid rounded-3 enlarge"
+                oncontextmenu="return false;" draggable="false">
             </div>
             <div class="col-lg-8 pt-4 pt-lg-0">
               <h3>UI/UX Designer &amp; Web Developer</h3>
@@ -465,7 +465,7 @@
               <li class="timeline-item mb-5">
                 <h5 class="fw-bold">Bachelor of Engineering (B.E.)</h5>
                 <p class="text-muted mb-2 fw-bold">October 2021 - 2025 (Expected)</p>
-                <p class="text-muted">
+                <p class="text-justify">
                   I am currently working towards my Bachelor of Engineering degree in Computer Engineering at
                   <b>Gandhinagar Institute of Technology (Now Under Gandhinagar University) - Kalol, Gandhinagar</b>.
                   Throughout my academic
