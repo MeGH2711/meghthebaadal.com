@@ -17,6 +17,21 @@
     <script type='text/javascript'
         src='https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js'></script>
     <link rel="stylesheet" href="scrollbarbutton.css">
+    <!-- Imported Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+        rel="stylesheet">
+    <!-- AOS Animations -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <style>
+        body {
+            font-family: "Ubuntu", sans-serif;
+            overflow-x: hidden;
+        }
+    </style>
 </head>
 
 <body>
@@ -24,7 +39,7 @@
     <nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
         <div class="container-fluid">
             <a class="navbar-brand" href="index.html"><img src="IMAGES/megh-patel-logo/megh-patel-white.png"
-                    width="145"></a>
+                    data-aos="zoom-in" width="145"></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation">
@@ -33,31 +48,30 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="index.html">Home</a>
+                        <a class="nav-link" aria-current="page" href="index.html" data-aos="zoom-in">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="gallery.html">Photos</a>
+                        <a class="nav-link" href="gallery.html" data-aos="zoom-in">Photos</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="projects.html">Projects</a>
+                        <a class="nav-link" aria-current="page" href="projects.html" data-aos="zoom-in">Projects</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="certification.html">Certifications</a>
+                        <a class="nav-link active" aria-current="page" href="certification.html"
+                            data-aos="zoom-in">Certifications</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link"
-                            onclick="window.open('https://www.youtube.com/channel/UCGy8vwjgLsIl5c10_TAhGLA','_blank')">YouTube</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="contactme.html">Contact Me</a>
+                        <a class="nav-link" href="contactme.html" data-aos="zoom-in">Contact Me</a>
                     </li>
                 </ul>
+                <a class="btn btn-outline-light mr-3 my-2" href="Megh CV.pdf" role="button" target="_blank"
+                    data-aos="zoom-in">Resume</a>
             </div>
         </div>
     </nav>
     <div class="container">
         <div class="page-heading text-center my-4">
-            <h1>Certificates</h1>
+            <h1 data-aos="zoom-in">Certifications</h1>
         </div>
         <hr>
         <div class="row">
@@ -65,17 +79,21 @@
                 <div class="card mb-3 border-0">
                     <div class="row g-0">
                         <div class="col-md-5">
-                            <img src="IMAGES/certification/sqlthumbnail.jpg" class="img-fluid rounded" alt="...">
+                            <img src="IMAGES/certification/sqlthumbnail.jpg" class="img-fluid rounded"
+                                data-aos="fade-up">
                         </div>
                         <div class="col-md-7">
                             <div class="card-body">
-                                <h5 class="card-title">Hands-On SQL Server, ManagementStudio, SQL Queires, AzureStudio
+                                <h5 class="card-title" data-aos="fade-up">Hands-On SQL Server, ManagementStudio, SQL
+                                    Queires, AzureStudio
                                 </h5>
-                                <p class="card-text my-4">Through the course, I gained hands-on experience in SQL
+                                <p class="card-text my-4" data-aos="fade-up">Through the course, I gained hands-on
+                                    experience in SQL
                                     Server,
                                     Management Studio, SQL queries, and Azure Studio, enhancing my database management
                                     and query optimization skills.</p>
-                                <button class="btn btn-outline-primary">View Certificate</button>
+                                <a class="btn btn-outline-primary" data-aos="fade-up" href="error-page.html">View
+                                    Certificate</a>
                             </div>
                         </div>
                     </div>
@@ -85,17 +103,19 @@
                 <div class="card mb-3 border-0">
                     <div class="row g-0">
                         <div class="col-md-5">
-                            <img src="IMAGES/certification/softskills.jpg" class="img-fluid rounded" alt="...">
+                            <img src="IMAGES/certification/softskills.jpg" class="img-fluid rounded" data-aos="fade-up">
                         </div>
                         <div class="col-md-7">
                             <div class="card-body">
-                                <h5 class="card-title">TCS iON Career Edge - Young Professional</h5>
-                                <p class="card-text my-4">This course covers up - Communication Skills │ Presentation
+                                <h5 class="card-title" data-aos="fade-up">TCS iON Career Edge - Young Professional</h5>
+                                <p class="card-text my-4" data-aos="fade-up">This course covers up - Communication
+                                    Skills │ Presentation
                                     Skills │ Soft Skills │ Group Discussion Skills │
                                     Business Etiquette │ Effective Email
                                     Writing │ Overview of
                                     Artificial Intelligence.</p>
-                                <button class="btn btn-outline-primary">View Certificate</button>
+                                <a class="btn btn-outline-primary" data-aos="fade-up" href="error-page.html">View
+                                    Certificate</a>
                             </div>
                         </div>
                     </div>
@@ -105,15 +125,19 @@
                 <div class="card mb-3 border-0">
                     <div class="row g-0">
                         <div class="col-md-5">
-                            <img src="IMAGES/certification/ipawareness.jpg" class="img-fluid rounded" alt="...">
+                            <img src="IMAGES/certification/ipawareness.jpg" class="img-fluid rounded"
+                                data-aos="fade-up">
                         </div>
                         <div class="col-md-7">
                             <div class="card-body">
-                                <h5 class="card-title">NATIONAL INTELLECTUAL PROPERTY AWARENESS MISSION</h5>
-                                <p class="card-text my-4">Empowered by the National Intellectual Property Awareness
+                                <h5 class="card-title" data-aos="fade-up">NATIONAL INTELLECTUAL PROPERTY AWARENESS
+                                    MISSION</h5>
+                                <p class="card-text my-4" data-aos="fade-up">Empowered by the National Intellectual
+                                    Property Awareness
                                     Mission seminar, fostering innovation, legal acumen, and intellectual property
                                     appreciation for growth.</p>
-                                <button class="btn btn-outline-primary">View Certificate</button>
+                                <a class="btn btn-outline-primary" data-aos="fade-up" href="error-page.html">View
+                                    Certificate</a>
                             </div>
                         </div>
                     </div>
@@ -176,6 +200,9 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N"
         crossorigin="anonymous"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
 
 </html>

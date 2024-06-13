@@ -19,9 +19,24 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css"
     integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+  <!-- External CSS -->
   <link rel="stylesheet" href="scrollbarbutton.css">
-  <link rel="stylesheet" href="loader.css">
+  <!-- Imported Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+    rel="stylesheet">
+  <!-- AOS Animations -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
   <style>
+    body {
+      font-family: "Ubuntu", sans-serif;
+      overflow-x: hidden;
+    }
+
     .enlarge {
       transition: transform 0.3s ease;
     }
@@ -30,20 +45,34 @@
       transform: scale(1.025);
     }
 
-    /* Add a class for the loader on state */
-    #loader-on {
-      opacity: 1;
-      display: block;
-      transition: opacity 0.5s ease-in-out;
-      /* Add a transition for smoother fading */
+    .ltps:hover {
+      color: #fff;
+      transition: 1s ease-in;
     }
 
-    #loader-off {
-      opacity: 0;
-      display: none;
-      /* Disable interactions while invisible */
-      transition: opacity 0.5s ease-in-out;
-      /* Add a transition for smoother fading */
+    .landingimage {
+      -webkit-filter: drop-shadow(5px 5px 5px #b1b1b1);
+      filter: drop-shadow(3px 3px 3px #b1b1b1);
+      animation-name: floating;
+      animation-duration: 3s;
+      animation-iteration-count: infinite;
+      animation-timing-function: ease-in-out;
+      margin-left: 30px;
+      margin-top: 5px;
+    }
+
+    @keyframes floating {
+      0% {
+        transform: translate(0, 0px);
+      }
+
+      50% {
+        transform: translate(0, 15px);
+      }
+
+      100% {
+        transform: translate(0, -0px);
+      }
     }
 
     .scroller {
@@ -117,6 +146,124 @@
       width: 11px;
       content: "";
     }
+
+    .area {
+      width: 100%;
+      height: 100vh;
+    }
+
+    .circles {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+    }
+
+    .circles li {
+      position: absolute;
+      display: block;
+      list-style: none;
+      width: 20px;
+      height: 20px;
+      background: rgba(255, 255, 255, 0.2);
+      animation: animate 25s linear infinite;
+      bottom: -150px;
+
+    }
+
+    .circles li:nth-child(1) {
+      left: 25%;
+      width: 80px;
+      height: 80px;
+      animation-delay: 0s;
+    }
+
+
+    .circles li:nth-child(2) {
+      left: 10%;
+      width: 20px;
+      height: 20px;
+      animation-delay: 2s;
+      animation-duration: 12s;
+    }
+
+    .circles li:nth-child(3) {
+      left: 70%;
+      width: 20px;
+      height: 20px;
+      animation-delay: 4s;
+    }
+
+    .circles li:nth-child(4) {
+      left: 40%;
+      width: 60px;
+      height: 60px;
+      animation-delay: 0s;
+      animation-duration: 18s;
+    }
+
+    .circles li:nth-child(5) {
+      left: 65%;
+      width: 20px;
+      height: 20px;
+      animation-delay: 0s;
+    }
+
+    .circles li:nth-child(6) {
+      left: 75%;
+      width: 110px;
+      height: 110px;
+      animation-delay: 3s;
+    }
+
+    .circles li:nth-child(7) {
+      left: 35%;
+      width: 150px;
+      height: 150px;
+      animation-delay: 7s;
+    }
+
+    .circles li:nth-child(8) {
+      left: 50%;
+      width: 25px;
+      height: 25px;
+      animation-delay: 15s;
+      animation-duration: 45s;
+    }
+
+    .circles li:nth-child(9) {
+      left: 20%;
+      width: 15px;
+      height: 15px;
+      animation-delay: 2s;
+      animation-duration: 35s;
+    }
+
+    .circles li:nth-child(10) {
+      left: 85%;
+      width: 150px;
+      height: 150px;
+      animation-delay: 0s;
+      animation-duration: 11s;
+    }
+
+    @keyframes animate {
+
+      0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+        border-radius: 0;
+      }
+
+      100% {
+        transform: translateY(-1000px) rotate(720deg);
+        opacity: 0;
+        border-radius: 50%;
+      }
+
+    }
   </style>
   <!-- CSS Stylesheet End -->
 
@@ -128,29 +275,28 @@
   <script type='text/javascript'
     src='https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js'></script>
   <script type="text/javascript" src="script.js"></script>
-  <script type="text/javascript" src="loader.js"></script>
   <!-- JavaScript Script End -->
 </head>
 
 <body>
-  <div id="loader-on" style="display: flex; justify-content: center; align-items: center; height: 100vh;">
-    <div class="lds-roller">
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-    </div>
-  </div>
-  <!-- ======= Navigation Bar ======= -->
-  <div id="loader-off">
+  <div class="area">
+    <ul class="circles">
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+    </ul>
+    <!-- ======= Navigation Bar ======= -->
     <nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
       <div class="container-fluid">
         <a class="navbar-brand" href="index.html"><img src="IMAGES/megh-patel-logo/megh-patel-white.png"
-            width="145"></a>
+            data-aos="zoom-in" width="145"></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
           aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -158,436 +304,515 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+              <a class="nav-link active" aria-current="page" href="index.html" data-aos="zoom-in">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="gallery.html">Photos</a>
+              <a class="nav-link" href="gallery.html" data-aos="zoom-in">Photos</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="projects.html">Projects</a>
+              <a class="nav-link" aria-current="page" href="projects.html" data-aos="zoom-in">Projects</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link"
-                onclick="window.open('https://www.youtube.com/channel/UCGy8vwjgLsIl5c10_TAhGLA','_blank')">YouTube</a>
+              <a class="nav-link" aria-current="page" href="certification.html" data-aos="zoom-in">Certifications</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="contactme.html">Contact Me</a>
+              <a class="nav-link" href="contactme.html" data-aos="zoom-in">Contact Me</a>
             </li>
           </ul>
-          <a class="btn btn-outline-light mr-3 my-2 disabled" href="error-page.html" role="button"
-            target="_blank">Resume</a>
+          <a class="btn btn-outline-light mr-3 my-2" href="Megh CV.pdf" role="button" target="_blank"
+            data-aos="zoom-in">Resume</a>
         </div>
       </div>
     </nav>
 
     <!-- Landing Page Main Image with Name and Typewriter Animation for Laptop Screen -->
-    <div class="container-fluid flex-column justify-content-center align-items-center">
-      <div class="row">
-        <div class="col-md-6" style="padding-top: 150px; padding-bottom: 200px;">
-          <h4 style="font-size: 25px;">Hi, my name is</h4>
-          <h1 style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size: 100px;">
-            MEGH PATEL.</h1>
-          <h1
-            style="text-decoration: none; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size: 50px; color: #8892B0;">
-            I'm
-            <a class="typewrite" data-period="2000"
-              data-type='[ "UI/UX Designer.", "Web Developer.", "Frontend Developer."]'
-              style="text-decoration: none; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size: 50px; color: #8892B0;">
-              <span class="wrap"></span>
-            </a>
-          </h1>
-        </div>
-        <div class="col-md-6 d-none d-lg-block p-0">
-          <img src="IMAGES/index-page/sample.png" class="float-end"
-            style="filter: drop-shadow(2px 5px 10px rgba(116, 116, 116, 0.2));" oncontextmenu="return false;"
-            draggable="false">
-        </div>
-      </div>
-    </div>
-    <div class="scroller">
-      <div class="scroller-in">
-        <h4 class="hollow-text">Web Developer</h4>
-        <h4>|</h4>
-        <h4 class="hollow-text">UI/UX Designer</h4>
-        <h4>|</h4>
-        <h4 class="hollow-text">Front End Developer</h4>
-        <h4>|</h4>
-        <h4 class="hollow-text">Anchor</h4>
-        <h4>|</h4>
-      </div>
-      <div class="scroller-in">
-        <h4 class="hollow-text">Web Developer</h4>
-        <h4>|</h4>
-        <h4 class="hollow-text">UI/UX Designer</h4>
-        <h4>|</h4>
-        <h4 class="hollow-text">Front End Developer</h4>
-        <h4>|</h4>
-        <h4 class="hollow-text">Anchor</h4>
-        <h4>|</h4>
-      </div>
-    </div>
     <div class="container">
-      <!-- ======= About Section ======= -->
-      <section id="about" class="about mb-4">
-        <div class="container">
-          <div class="section-title">
-            <h2 class="text-center mt-3">About</h2>
-            <hr>
-            <p>Hi! I am <span class="fw-bold">Megh Patel</span>, currently pursuing my bachelors degree in Computer
-              Engineering at <a style="font-weight: bold;"
-                onclick="window.open('https://gandhinagaruni.ac.in/','_blank')">Gandhinagar University - Gandhinagar
-                Institute of Technology</a>. I am interested in the field of Computer Science and Engineering, and
-              working
-              towards developing the necessary skills and knowledge to pursue a career in this area.</p>
-          </div>
-          <div class="row">
-            <div class="col-lg-4">
-              <img src="IMAGES/index-page/about-page.jpg" class="img-fluid rounded-3 enlarge"
-                oncontextmenu="return false;" draggable="false">
+      <div class="row">
+        <div class="col d-flex justify-content-center align-items-center pt-5">
+          <div class="row row-cols-1">
+            <div class="col">
+              <h4 data-aos="fade-right">Hi, my name is</h4>
             </div>
-            <div class="col-lg-8 pt-4 pt-lg-0">
-              <h3>UI/UX Designer &amp; Web Developer</h3>
-              <hr>
-              <p class="fst-italic">
-                I have keen intrest in Web Designing and Web Development and have been working on many such projects to
-                gain more experience towards it.
-              </p>
-              <div class="row">
-                <div class="col-lg-6">
-                  <ul>
-                    <li><strong>Birthday :</strong> <span>27 November 2002</span></li>
-                    <li><strong>Website :</strong> <span>www.meghpatel.com</span></li>
-                    <li><strong>Phone :</strong> <span>+91 9510983397</span></li>
-                    <li><strong>City :</strong> <span>Ahmedabad, Gujarat</span></li>
-                  </ul>
-                </div>
-                <div class="col-lg-6">
-                  <ul>
-                    <li><strong>Age :</strong> <span>20</span></li>
-                    <li><strong>Degree :</strong> <span>Bachelors in Engineering</span></li>
-                    <li><strong>Email-ID :</strong> <span>patelmeghmahesh2701@gmail.com</span></li>
-                    <li><strong>Freelance :</strong> <span>Unavailable</span></li>
-                  </ul>
-                </div>
-              </div>
-              <p>
-                I am immersing myself in a wide array of subjects, ranging from programming languages to computer
-                systems
-                architecture, and I'm actively engaging in practical learning by participating in lab work, projects,
-                and
-                internships. Beyond my academic pursuits, I am an enthusiastic participant in various extracurricular
-                activities, including clubs and organizations that align with my field of study.<br><br>
+            <div class="col">
+              <h1 data-aos="fade-right"
+                style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size: 50px;">
+                MEGH PATEL.</h1>
+            </div>
+            <div class="col">
+              <h1 data-aos="fade-right"
+                style="text-decoration: none; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size: 50px; color: #8892B0;">
+                I'm
+                <a class="typewrite" data-period="2000"
+                  data-type='[ "UI/UX Designer.", "Web Developer.", "Frontend Developer.", "Data Analyst."]'
+                  style="text-decoration: none; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size: 50px; color: #8892B0;">
+                  <span class="wrap"></span>
+                </a>
+              </h1>
+            </div>
+            <div class="col mt-3">
+              <!-- Facebook -->
+              <a class="btn btn-floating rounded-circle border-0 fs-4 ltps" data-aos="fade-in"
+                onclick="window.open('https://www.facebook.com/profile.php?id=100088289332716','_blank')"
+                role="button"><i class="bi bi-facebook"></i></a>
 
-                Moreover, I have a genuine curiosity for technology and an unyielding passion for making a meaningful
-                impact on the world through my work. On top of all this, I have an additional facet to my personality—I
-                absolutely love hosting a diverse range of events, which adds an extra layer of excitement to my
-                journey.
-              </p>
+              <!-- Twitter -->
+              <a class="btn btn-floating rounded-circle border-0 fs-4 ltps" data-aos="fade-in"
+                onclick="window.open('https://twitter.com/meghthebaadal','_blank')" role="button"><i
+                  class="bi bi-twitter"></i></a>
+
+              <!-- Instagram -->
+              <a class="btn btn-floating rounded-circle border-0 fs-4 ltps" data-aos="fade-in"
+                onclick="window.open('https://www.instagram.com/megh_vekaria','_blank')" role="button"><i
+                  class="bi bi-instagram"></i></a>
+
+              <!-- Linkedin -->
+              <a class="btn btn-floating rounded-circle border-0 fs-4 ltps" data-aos="fade-in"
+                onclick="window.open('https://www.linkedin.com/in/megh-patel-7838a1229/','_blank')" role="button"><i
+                  class="bi bi-linkedin"></i></a>
+
+              <!-- Github -->
+              <a class="btn btn-floating rounded-circle border-0 fs-4 ltps" data-aos="fade-in"
+                onclick="window.open('https://github.com/MeGH2711 ','_blank')" role="button"><i
+                  class="bi bi-github"></i></a>
+
+              <!-- Youtube -->
+              <a class="btn btn-floating rounded-circle border-0 fs-4 ltps" data-aos="fade-in"
+                onclick="window.open('https://www.youtube.com/channel/UCGy8vwjgLsIl5c10_TAhGLA?sub_confirmation=1','_blank')"
+                role="button"><i class="bi bi-youtube"></i></a>
             </div>
           </div>
         </div>
-      </section>
-      <!-- ======= Skills Section ======= -->
-      <section id="skills" class="skills mb-4">
-        <div class="container">
-          <div class="section-title">
-            <hr>
-            <h2 class="text-center mt-3">Skills</h2>
-            <hr>
-            <p>I have a deep understanding of the technical aspects of these fields, as well as a creative eye for
-              design.
-              I have a keen interest in building things from scratch. Whether working on my projects or collaborating
-              projects with the team, my passion for coding and web designing keeps me motivated to learn more and
-              improvize my skills.</p>
-          </div>
-          <div class="row">
-            <div class="col-lg-6">
-              <div class="card mb-3 enlarge">
-                <div class="row g-0">
-                  <div class="col-md-3 d-flex justify-content-center text-center">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" style="fill: #ADB5BD; width: 50%;">
-                      <path
-                        d="M0-360v-240h48v89h108v-89h48v240h-48v-103H48v103H0Zm316 0v-192h-70v-48h188v48h-70v192h-48Zm160 0v-206q0-15 9.5-24.5T510-600h200q15 0 24.5 9.5T744-566v206h-48v-192h-62v150h-48v-150h-62v192h-48Zm326 0v-240h48v192h110v48H802Z" />
-                    </svg>
-                  </div>
-                  <div class="col-md-9">
-                    <div class="card-body">
-                      <h5 class="card-title">HTML5</h5>
-                      <div class="my-2">
-                        <h7>90%</h7>
-                      </div>
-                      <div class="progress" role="progressbar" aria-label="Basic example" aria-valuenow="75"
-                        aria-valuemin="0" aria-valuemax="100" class="ml-1 my-1">
-                        <div class="progress-bar progress-bar-striped progress-bar-animated" style="width: 90%">
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="card mb-3 enlarge">
-                <div class="row g-0">
-                  <div class="col-md-3 d-flex justify-content-center text-center">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" style="fill: #ADB5BD; width: 50%;">
-                      <path
-                        d="M414-360q-15 0-24.5-9.5T380-394v-46h48v32h104v-53H414q-14 0-24-10t-10-24v-71q0-15 9.5-24.5T414-600h132q15 0 24.5 9.5T580-566v46h-48v-32H428v53h118q14 0 24 10t10 24v71q0 15-9.5 24.5T546-360H414Zm260 0q-15 0-24.5-9.5T640-394v-46h48v32h104v-53H674q-14 0-24-10t-10-24v-71q0-15 9.5-24.5T674-600h132q15 0 24.5 9.5T840-566v46h-48v-32H688v53h118q14 0 24 10t10 24v71q0 15-9.5 24.5T806-360H674Zm-520 0q-15 0-24.5-9.5T120-394v-172q0-15 9.5-24.5T154-600h132q15 0 24.5 9.5T320-566v46h-48v-32H168v144h104v-32h48v46q0 15-9.5 24.5T286-360H154Z" />
-                    </svg>
-                  </div>
-                  <div class="col-md-9">
-                    <div class="card-body">
-                      <h5 class="card-title">CSS3</h5>
-                      <div class="my-2">
-                        <h7>80%</h7>
-                      </div>
-                      <div class="progress" role="progressbar" aria-label="Basic example" aria-valuenow="75"
-                        aria-valuemin="0" aria-valuemax="100" class="ml-1 my-1">
-                        <div class="progress-bar progress-bar-striped progress-bar-animated" style="width: 80%">
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="card mb-3 enlarge">
-                <div class="row g-0">
-                  <div class="col-md-3 d-flex justify-content-center text-center">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" style="fill: #ADB5BD; width: 50%;">
-                      <path
-                        d="M274-360q-15 0-24.5-9.5T240-394v-66h48v52h84v-192h48v206q0 15-9.5 24.5T386-360H274Zm240 0q-15 0-24.5-9.5T480-394v-46h48v32h104v-53H514q-14 0-24-10t-10-24v-71q0-15 9.5-24.5T514-600h132q15 0 24.5 9.5T680-566v46h-48v-32H528v53h118q14 0 24 10t10 24v71q0 15-9.5 24.5T646-360H514Z" />
-                    </svg>
-                  </div>
-                  <div class="col-md-9">
-                    <div class="card-body">
-                      <h5 class="card-title">CSS3</h5>
-                      <div class="my-2">
-                        <h7>60%</h7>
-                      </div>
-                      <div class="progress" role="progressbar" aria-label="Basic example" aria-valuenow="75"
-                        aria-valuemin="0" aria-valuemax="100" class="ml-1 my-1">
-                        <div class="progress-bar progress-bar-striped progress-bar-animated" style="width: 60%">
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-6">
-              <div class="card mb-3 enlarge">
-                <div class="row g-0">
-                  <div class="col-md-3 d-flex justify-content-center text-center">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" style="fill: #ADB5BD; width: 50%;">
-                      <path
-                        d="M120-360v-240h152q20 0 34 14t14 34v64q0 20-14 34t-34 14H168v80h-48Zm258 0v-240h48v89h108v-89h48v240h-48v-103H426v103h-48Zm282 0v-240h152q20 0 34 14t14 34v64q0 20-14 34t-34 14H708v80h-48ZM168-488h104v-64H168v64Zm540 0h104v-64H708v64Z" />
-                    </svg>
-                  </div>
-                  <div class="col-md-9">
-                    <div class="card-body">
-                      <h5 class="card-title">PHP</h5>
-                      <div class="my-2">
-                        <h7>30%</h7>
-                      </div>
-                      <div class="progress" role="progressbar" aria-label="Basic example" aria-valuenow="75"
-                        aria-valuemin="0" aria-valuemax="100" class="ml-1 my-1">
-                        <div class="progress-bar progress-bar-striped progress-bar-animated" style="width: 30%">
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="card mb-3 enlarge">
-                <div class="row g-0">
-                  <div class="col-md-3 d-flex justify-content-center align-items-center my-2">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="50px" height="50px" id="python">
-                      <path fill="#ADB5BD"
-                        d="M20.08 23.41h7.54a5 5 0 0 0 4.84-4.05V10.2s-1.81-4-9.11-4-8.54 3.35-8.54 3.35v4.71h8.83V16H11.88a6.21 6.21 0 0 0-6.25 6.22v5.16a5.45 5.45 0 0 0 5.45 5.46H14v-3.36a6.06 6.06 0 0 1 6.08-6.07ZM18.72 12a1.51 1.51 0 1 1 1.51-1.51A1.52 1.52 0 0 1 18.72 12Z">
-                      </path>
-                      <path fill="#ADB5BD"
-                        d="M36.92 15.17H34v3.35a6.06 6.06 0 0 1-6.06 6.07h-7.56a5 5 0 0 0-4.84 4.05v9.16s1.81 4 9.11 4 8.54-3.35 8.54-3.35v-4.68h-8.83V32h11.76a6.21 6.21 0 0 0 6.25-6.22v-5.15a5.45 5.45 0 0 0-5.45-5.46ZM29.28 36a1.51 1.51 0 1 1-1.51 1.51A1.52 1.52 0 0 1 29.28 36Z">
-                      </path>
-                    </svg>
-                  </div>
-                  <div class="col-md-9">
-                    <div class="card-body">
-                      <h5 class="card-title">Python</h5>
-                      <div class="my-2">
-                        <h7>90%</h7>
-                      </div>
-                      <div class="progress" role="progressbar" aria-label="Basic example" aria-valuenow="75"
-                        aria-valuemin="0" aria-valuemax="100" class="ml-1 my-1">
-                        <div class="progress-bar progress-bar-striped progress-bar-animated" style="width: 90%">
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="card mb-3 enlarge">
-                <div class="row g-0">
-                  <div class="col-md-3 d-flex justify-content-center align-items-center my-2">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="50px" height="50px" viewBox="0 0 24 24"
-                      id="clapperboard-edit">
-                      <path fill="#ADB5BD" fill-rule="evenodd"
-                        d="M11.9426 1.25H12.0574C14.3658 1.24999 16.1748 1.24998 17.5863 1.43975C19.031 1.63399 20.1711 2.03933 21.0659 2.93414C21.859 3.72729 22.2687 4.71445 22.4865 5.93898C22.7006 7.14188 22.7398 8.63844 22.7479 10.4967C22.7497 10.9109 22.4154 11.2482 22.0012 11.25C21.587 11.2518 21.2498 10.9175 21.2479 10.5033C21.2451 9.86262 21.2384 9.2807 21.2232 8.75H13.5112C13.5033 8.75013 13.4953 8.75013 13.4874 8.75H7.01122C7.00327 8.75013 6.99532 8.75013 6.98737 8.75H2.77672C2.75045 9.67173 2.75 10.7422 2.75 12C2.75 14.3782 2.75159 16.0864 2.92637 17.3864C3.09825 18.6648 3.42514 19.4355 3.9948 20.0052C4.47928 20.4897 5.10692 20.7966 6.06179 20.9836C7.03759 21.1747 8.2972 21.2303 10.0064 21.2448C10.4206 21.2483 10.7535 21.5869 10.75 22.0011C10.7465 22.4153 10.4078 22.7483 9.99364 22.7448C8.28967 22.7303 6.90193 22.6767 5.77345 22.4556C4.62404 22.2305 3.69048 21.8222 2.93414 21.0659C2.03933 20.1711 1.63399 19.031 1.43975 17.5863C1.24998 16.1748 1.24999 14.3658 1.25 12.0574V11.9426C1.24999 9.63423 1.24998 7.82519 1.43975 6.41371C1.63399 4.96897 2.03933 3.82895 2.93414 2.93414C3.82895 2.03933 4.96897 1.63399 6.41371 1.43975C7.82519 1.24998 9.63423 1.24999 11.9426 1.25ZM2.85681 7.25H6.58829L9.44439 2.76185C8.31691 2.77915 7.39205 2.82171 6.61358 2.92637C5.33517 3.09825 4.56445 3.42514 3.9948 3.9948C3.42514 4.56445 3.09825 5.33517 2.92637 6.61358C2.89922 6.81554 2.87624 7.02735 2.85681 7.25ZM11.2072 2.75032C11.1886 2.80268 11.1638 2.85379 11.1327 2.90266L8.36626 7.25H13.0883L15.9189 2.80191C14.8557 2.7507 13.5747 2.75 12 2.75C11.727 2.75 11.4629 2.75002 11.2072 2.75032ZM17.5982 2.95698L14.8663 7.25H21.1432C21.11 6.86849 21.0665 6.52079 21.0097 6.20174C20.8255 5.16648 20.5122 4.50178 20.0052 3.9948C19.4677 3.45731 18.7512 3.13594 17.5982 2.95698ZM18.4488 12.988C19.4328 12.004 21.0281 12.004 22.012 12.988C22.996 13.9719 22.996 15.5672 22.012 16.5512L17.7302 20.833C17.4994 21.0639 17.3387 21.2246 17.1585 21.3652C16.9467 21.5304 16.7175 21.6721 16.4749 21.7877C16.2686 21.886 16.0531 21.9578 15.7434 22.061L13.8653 22.687C13.4243 22.834 12.9381 22.7192 12.6095 22.3905C12.2808 22.0619 12.166 21.5757 12.313 21.1347L12.939 19.2567C13.0422 18.947 13.114 18.7314 13.2123 18.5251C13.3279 18.2826 13.4696 18.0533 13.6348 17.8415C13.7753 17.6613 13.936 17.5006 14.1669 17.2698L18.4488 12.988ZM20.9514 14.0486C20.5532 13.6505 19.9076 13.6505 19.5095 14.0486L19.3777 14.1803C19.3829 14.1966 19.3885 14.2133 19.3944 14.2305C19.4762 14.4661 19.6315 14.7784 19.9266 15.0734C20.2216 15.3685 20.5339 15.5238 20.7695 15.6056C20.7867 15.6115 20.8034 15.6171 20.8197 15.6223L20.9514 15.4905C21.3495 15.0924 21.3495 14.4468 20.9514 14.0486ZM19.6857 16.7562C19.4193 16.6068 19.1372 16.4054 18.8659 16.1341C18.5946 15.8628 18.3932 15.5807 18.2438 15.3143L15.2578 18.3003C14.9856 18.5725 14.8944 18.6655 14.8176 18.764C14.7193 18.8899 14.6351 19.0262 14.5664 19.1704C14.5127 19.2831 14.4703 19.4063 14.3485 19.7715L14.0029 20.8084L14.1916 20.9971L15.2285 20.6515C15.5937 20.5297 15.7169 20.4873 15.8296 20.4336C15.9738 20.3649 16.1101 20.2807 16.236 20.1824C16.3345 20.1056 16.4275 20.0144 16.6997 19.7422L19.6857 16.7562Z"
-                        clip-rule="evenodd"></path>
-                    </svg>
-                  </div>
-                  <div class="col-md-9">
-                    <div class="card-body">
-                      <h5 class="card-title">Video Editing</h5>
-                      <div class="my-2">
-                        <h7>95%</h7>
-                      </div>
-                      <div class="progress" role="progressbar" aria-label="Basic example" aria-valuenow="75"
-                        aria-valuemin="0" aria-valuemax="100" class="ml-1 my-1">
-                        <div class="progress-bar progress-bar-striped progress-bar-animated" style="width: 95%">
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+        <div class="col text-center d-none d-lg-block">
+          <img data-aos="fade-in" class="landingimage mt-2" src="IMAGES/index-page/landingimagemegh.png" height="600"
+            oncontextmenu="return false;" draggable="false">
         </div>
-      </section>
-      <!-- ======= Education Section ======= -->
-      <section id="education" class="education">
-        <div class="container">
-          <div class="section-title">
-            <hr>
-            <h2 class="text-center mt-3">Education</h2>
-            <hr>
-          </div>
-          <div class="container px-3">
-            <ul class="timeline">
-              <li class="timeline-item mb-5">
-                <h5 class="fw-bold">Bachelor of Engineering (B.E.)</h5>
-                <p class="text-muted mb-2 fw-bold">October 2021 - 2025 (Expected)</p>
-                <p class="text-justify">
-                  I am currently working towards my Bachelor of Engineering degree in Computer Engineering at
-                  <b>Gandhinagar Institute of Technology (Now Under Gandhinagar University) - Kalol, Gandhinagar</b>.
-                  Throughout my academic
-                  journey, I have gained valuable knowledge in various areas of computer engineering. I have had the
-                  opportunity to delve into subjects such as digital logic design, programming languages including Java,
-                  Python, C, and others. This diverse curriculum,
-                  combined with hands-on projects, collaborative learning experiences, and exposure to industry trends,
-                  has not only deepened my passion for computer engineering but also equipped me with technical skills
-                  and a problem-solving mindset. I am confident that my education is preparing me for a successful and
-                  rewarding career in this dynamic field.
-                </p>
-              </li>
-              <!-- Add More if needed from first li tag -->
-            </ul>
-          </div>
-        </div>
-      </section>
-      <!-- ======= Testimonial Section ======= -->
-      <!-- ======= Testimonial Image Size - 300 px x 300 px ======= -->
-      <section id="testimonial" class="testimonial mb-4">
-        <div class="container mt-5 mb-5">
-          <hr>
-          <div class="section-title">
-            <h2 class="text-center mt-3">Testimonials</h2>
-            <hr>
-          </div>
-          <div class="row">
-            <div class="col-12">
-              <div class="card h-100 text-center border-0">
-                <div class="card-header my-2" style="background: transparent; border: none;">
-                  <img src="IMAGES/testimonial/hitesh-kachella-ti.jpg" class="rounded-circle" width="80">
-                </div>
-                <div class="card-body">
-                  <h5 class="card-title list-group-item my-3">Hitesh Kachhela</h5>
-                  <span class="fw-bold fs-7 list-group-item  my-3">Business Owner and Android Trainer at Praxware
-                    Technologies</span>
-                  <p class="card-text my-3 list-group-item my-4">Great intelligent student that have done all practical
-                    that perform in the during the Web Development with Python using Django Framework Workshop.
-                  </p>
-                </div>
-                <div class="card-footer" style="background: transparent; border: none;">
-                  <div class="ratings">
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-fill"></i>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-      </section>
+      </div>
     </div>
-    <!-- ======= Contact Me Section ======= -->
-    <section id="contactme" class="contactme">
-      <div class="container mb-3">
+  </div>
+  <div class="scroller" data-aos="fade-left">
+    <div class="scroller-in">
+      <h4 class="hollow-text">Web Developer</h4>
+      <h4>|</h4>
+      <h4 class="hollow-text">UI/UX Designer</h4>
+      <h4>|</h4>
+      <h4 class="hollow-text">Front End Developer</h4>
+      <h4>|</h4>
+      <h4 class="hollow-text">Data Analyst</h4>
+      <h4>|</h4>
+    </div>
+    <div class="scroller-in">
+      <h4 class="hollow-text">Web Developer</h4>
+      <h4>|</h4>
+      <h4 class="hollow-text">UI/UX Designer</h4>
+      <h4>|</h4>
+      <h4 class="hollow-text">Front End Developer</h4>
+      <h4>|</h4>
+      <h4 class="hollow-text">Data Analyst</h4>
+      <h4>|</h4>
+    </div>
+  </div>
+  <div class="container">
+    <!-- ======= About Section ======= -->
+    <section id="about" class="about mb-4">
+      <div class="container">
         <div class="section-title">
+          <h1 class="text-center mt-3" data-aos="zoom-in">About</h1>
           <hr>
-          <h2 class="text-center mt-3">Contact Me</h2>
-          <hr>
-          <p class="text-center fst-italic">Interested in learning more about me or providing valuable feedback? Feel
-            free
-            to reach out by clicking the button below.</p>
+          <p class="fs-6" data-aos="zoom-in">Hi! I am <span class="fw-bold">Megh Patel</span>, currently pursuing my
+            bachelors degree in Computer
+            Engineering at <a style="font-weight: bold; cursor: pointer;"
+              onclick="window.open('https://gandhinagaruni.ac.in/','_blank')">Gandhinagar
+              Institute of Technology (Gandhinagar University) Affiliated with Gujarat Technological University</a>. I
+            am interested in the field of Computer Science and Engineering, and
+            working
+            towards developing the necessary skills and knowledge to pursue a career in this area.</p>
         </div>
-        <div class="text-center">
-          <a class="btn btn-primary" href="contactme.html" role="button">Contact Me</a>
+        <div class="row">
+          <div class="col-lg-4">
+            <img src="IMAGES/index-page/about-page.png" class="img-fluid rounded-3 enlarge"
+              oncontextmenu="return false;" draggable="false" data-aos="zoom-in">
+          </div>
+          <div class="col-lg-8 pt-4 pt-lg-0">
+            <h3 data-aos="zoom-in">UI/UX Designer &amp; Web Developer</h3>
+            <hr>
+            <p class="fst-italic" data-aos="zoom-in">
+              I have keen intrest in Web Designing and Web Development and have been working on many such projects to
+              gain more experience towards it.
+            </p>
+            <div class="row">
+              <div class="col-lg-6">
+                <ul data-aos="zoom-in">
+                  <li><strong>Birthday :</strong> <span>27 November 2002</span></li>
+                  <li><strong>Website :</strong> <span>www.meghpatel.com</span></li>
+                  <li><strong>Phone :</strong> <span>+91 9510983397</span></li>
+                  <li><strong>City :</strong> <span>Ahmedabad, Gujarat</span></li>
+                </ul>
+              </div>
+              <div class="col-lg-6">
+                <ul data-aos="zoom-in">
+                  <li><strong>Age :</strong> <span>21</span></li>
+                  <li><strong>Degree :</strong> <span>Bachelors in Engineering</span></li>
+                  <li><strong>Email-ID :</strong> <span>patelmeghmahesh2701@gmail.com</span></li>
+                  <li><strong>Freelance :</strong> <span>Unavailable</span></li>
+                </ul>
+              </div>
+            </div>
+            <p data-aos="zoom-in">
+              I am immersing myself in a wide array of subjects, ranging from programming languages to computer
+              systems
+              architecture, and I'm actively engaging in practical learning by participating in lab work, projects,
+              and
+              internships. Beyond my academic pursuits, I am an enthusiastic participant in various extracurricular
+              activities, including clubs and organizations that align with my field of study.<br><br>
+
+              Moreover, I have a genuine curiosity for technology and an unyielding passion for making a meaningful
+              impact on the world through my work. On top of all this, I have an additional facet to my personality—I
+              absolutely love hosting a diverse range of events, which adds an extra layer of excitement to my
+              journey.
+            </p>
+          </div>
         </div>
       </div>
     </section>
-    <!--Footer-->
-    <footer class="bg-dark text-center text-white">
-      <div class="container p-4 pb-0">
-        <!-- Section: Social media -->
-        <section class="mb-4">
-          <!-- Facebook -->
-          <a class="btn btn-floating rounded-circle border-0 fs-4"
-            onclick="window.open('https://www.facebook.com/profile.php?id=100088289332716','_blank')" role="button"><i
-              class="bi bi-facebook"></i></a>
-
-          <!-- Twitter -->
-          <a class="btn btn-floating rounded-circle border-0 fs-4"
-            onclick="window.open('https://twitter.com/meghthebaadal','_blank')" role="button"><i
-              class="bi bi-twitter"></i></a>
-
-          <!-- Instagram -->
-          <a class="btn btn-floating rounded-circle border-0 fs-4"
-            onclick="window.open('https://www.instagram.com/megh_vekaria','_blank')" role="button"><i
-              class="bi bi-instagram"></i></a>
-
-          <!-- Linkedin -->
-          <a class="btn btn-floating rounded-circle border-0 fs-4"
-            onclick="window.open('https://www.linkedin.com/in/megh-patel-7838a1229/','_blank')" role="button"><i
-              class="bi bi-linkedin"></i></a>
-
-          <!-- Github -->
-          <a class="btn btn-floating rounded-circle border-0 fs-4"
-            onclick="window.open('https://github.com/MeGH2711 ','_blank')" role="button"><i
-              class="bi bi-github"></i></a>
-
-          <!-- Youtube -->
-          <a class="btn btn-floating rounded-circle border-0 fs-4"
-            onclick="window.open('https://www.youtube.com/channel/UCGy8vwjgLsIl5c10_TAhGLA','_blank')" role="button"><i
-              class="bi bi-youtube"></i></a>
-
-        </section>
-        <!-- Section: Social media -->
+    <!-- ======= Skills Section ======= -->
+    <section id="skills" class="skills mb-4">
+      <div class="container">
+        <div class="section-title">
+          <hr>
+          <h1 class="text-center mt-3" data-aos="zoom-in">Skills</h1>
+          <hr>
+          <p data-aos="zoom-in">I have a deep understanding of the technical aspects of these fields, as well as a
+            creative eye for
+            design.
+            I have a keen interest in building things from scratch. Whether working on my projects or collaborating
+            projects with the team, my passion for coding and web designing keeps me motivated to learn more and
+            improvize my skills.</p>
+        </div>
+        <div class="row">
+          <div class="col-lg-6">
+            <div class="card mb-3 enlarge">
+              <div class="row g-0">
+                <div class="col-md-3 d-flex justify-content-center text-center">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" style="fill: #ADB5BD; width: 50%;">
+                    <path
+                      d="M0-360v-240h48v89h108v-89h48v240h-48v-103H48v103H0Zm316 0v-192h-70v-48h188v48h-70v192h-48Zm160 0v-206q0-15 9.5-24.5T510-600h200q15 0 24.5 9.5T744-566v206h-48v-192h-62v150h-48v-150h-62v192h-48Zm326 0v-240h48v192h110v48H802Z" />
+                  </svg>
+                </div>
+                <div class="col-md-9">
+                  <div class="card-body">
+                    <h5 class="card-title">HTML5</h5>
+                    <div class="my-2">
+                      <h7>90%</h7>
+                    </div>
+                    <div class="progress" role="progressbar" aria-label="Basic example" aria-valuenow="75"
+                      aria-valuemin="0" aria-valuemax="100" class="ml-1 my-1">
+                      <div class="progress-bar progress-bar-striped progress-bar-animated" style="width: 90%">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card mb-3 enlarge">
+              <div class="row g-0">
+                <div class="col-md-3 d-flex justify-content-center text-center">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" style="fill: #ADB5BD; width: 50%;">
+                    <path
+                      d="M414-360q-15 0-24.5-9.5T380-394v-46h48v32h104v-53H414q-14 0-24-10t-10-24v-71q0-15 9.5-24.5T414-600h132q15 0 24.5 9.5T580-566v46h-48v-32H428v53h118q14 0 24 10t10 24v71q0 15-9.5 24.5T546-360H414Zm260 0q-15 0-24.5-9.5T640-394v-46h48v32h104v-53H674q-14 0-24-10t-10-24v-71q0-15 9.5-24.5T674-600h132q15 0 24.5 9.5T840-566v46h-48v-32H688v53h118q14 0 24 10t10 24v71q0 15-9.5 24.5T806-360H674Zm-520 0q-15 0-24.5-9.5T120-394v-172q0-15 9.5-24.5T154-600h132q15 0 24.5 9.5T320-566v46h-48v-32H168v144h104v-32h48v46q0 15-9.5 24.5T286-360H154Z" />
+                  </svg>
+                </div>
+                <div class="col-md-9">
+                  <div class="card-body">
+                    <h5 class="card-title">CSS3</h5>
+                    <div class="my-2">
+                      <h7>80%</h7>
+                    </div>
+                    <div class="progress" role="progressbar" aria-label="Basic example" aria-valuenow="75"
+                      aria-valuemin="0" aria-valuemax="100" class="ml-1 my-1">
+                      <div class="progress-bar progress-bar-striped progress-bar-animated" style="width: 80%">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card mb-3 enlarge">
+              <div class="row g-0">
+                <div class="col-md-3 d-flex justify-content-center text-center">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" style="fill: #ADB5BD; width: 50%;">
+                    <path
+                      d="M274-360q-15 0-24.5-9.5T240-394v-66h48v52h84v-192h48v206q0 15-9.5 24.5T386-360H274Zm240 0q-15 0-24.5-9.5T480-394v-46h48v32h104v-53H514q-14 0-24-10t-10-24v-71q0-15 9.5-24.5T514-600h132q15 0 24.5 9.5T680-566v46h-48v-32H528v53h118q14 0 24 10t10 24v71q0 15-9.5 24.5T646-360H514Z" />
+                  </svg>
+                </div>
+                <div class="col-md-9">
+                  <div class="card-body">
+                    <h5 class="card-title">CSS3</h5>
+                    <div class="my-2">
+                      <h7>60%</h7>
+                    </div>
+                    <div class="progress" role="progressbar" aria-label="Basic example" aria-valuenow="75"
+                      aria-valuemin="0" aria-valuemax="100" class="ml-1 my-1">
+                      <div class="progress-bar progress-bar-striped progress-bar-animated" style="width: 60%">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="card mb-3 enlarge">
+              <div class="row g-0">
+                <div class="col-md-3 d-flex justify-content-center text-center">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" style="fill: #ADB5BD; width: 50%;">
+                    <path
+                      d="M120-360v-240h152q20 0 34 14t14 34v64q0 20-14 34t-34 14H168v80h-48Zm258 0v-240h48v89h108v-89h48v240h-48v-103H426v103h-48Zm282 0v-240h152q20 0 34 14t14 34v64q0 20-14 34t-34 14H708v80h-48ZM168-488h104v-64H168v64Zm540 0h104v-64H708v64Z" />
+                  </svg>
+                </div>
+                <div class="col-md-9">
+                  <div class="card-body">
+                    <h5 class="card-title">PHP</h5>
+                    <div class="my-2">
+                      <h7>30%</h7>
+                    </div>
+                    <div class="progress" role="progressbar" aria-label="Basic example" aria-valuenow="75"
+                      aria-valuemin="0" aria-valuemax="100" class="ml-1 my-1">
+                      <div class="progress-bar progress-bar-striped progress-bar-animated" style="width: 30%">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card mb-3 enlarge">
+              <div class="row g-0">
+                <div class="col-md-3 d-flex justify-content-center align-items-center my-2">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="50px" height="50px" id="python">
+                    <path fill="#ADB5BD"
+                      d="M20.08 23.41h7.54a5 5 0 0 0 4.84-4.05V10.2s-1.81-4-9.11-4-8.54 3.35-8.54 3.35v4.71h8.83V16H11.88a6.21 6.21 0 0 0-6.25 6.22v5.16a5.45 5.45 0 0 0 5.45 5.46H14v-3.36a6.06 6.06 0 0 1 6.08-6.07ZM18.72 12a1.51 1.51 0 1 1 1.51-1.51A1.52 1.52 0 0 1 18.72 12Z">
+                    </path>
+                    <path fill="#ADB5BD"
+                      d="M36.92 15.17H34v3.35a6.06 6.06 0 0 1-6.06 6.07h-7.56a5 5 0 0 0-4.84 4.05v9.16s1.81 4 9.11 4 8.54-3.35 8.54-3.35v-4.68h-8.83V32h11.76a6.21 6.21 0 0 0 6.25-6.22v-5.15a5.45 5.45 0 0 0-5.45-5.46ZM29.28 36a1.51 1.51 0 1 1-1.51 1.51A1.52 1.52 0 0 1 29.28 36Z">
+                    </path>
+                  </svg>
+                </div>
+                <div class="col-md-9">
+                  <div class="card-body">
+                    <h5 class="card-title">Python</h5>
+                    <div class="my-2">
+                      <h7>90%</h7>
+                    </div>
+                    <div class="progress" role="progressbar" aria-label="Basic example" aria-valuenow="75"
+                      aria-valuemin="0" aria-valuemax="100" class="ml-1 my-1">
+                      <div class="progress-bar progress-bar-striped progress-bar-animated" style="width: 90%">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card mb-3 enlarge">
+              <div class="row g-0">
+                <div class="col-md-3 d-flex justify-content-center align-items-center my-2">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="50px" height="50px" viewBox="0 0 24 24"
+                    id="clapperboard-edit">
+                    <path fill="#ADB5BD" fill-rule="evenodd"
+                      d="M11.9426 1.25H12.0574C14.3658 1.24999 16.1748 1.24998 17.5863 1.43975C19.031 1.63399 20.1711 2.03933 21.0659 2.93414C21.859 3.72729 22.2687 4.71445 22.4865 5.93898C22.7006 7.14188 22.7398 8.63844 22.7479 10.4967C22.7497 10.9109 22.4154 11.2482 22.0012 11.25C21.587 11.2518 21.2498 10.9175 21.2479 10.5033C21.2451 9.86262 21.2384 9.2807 21.2232 8.75H13.5112C13.5033 8.75013 13.4953 8.75013 13.4874 8.75H7.01122C7.00327 8.75013 6.99532 8.75013 6.98737 8.75H2.77672C2.75045 9.67173 2.75 10.7422 2.75 12C2.75 14.3782 2.75159 16.0864 2.92637 17.3864C3.09825 18.6648 3.42514 19.4355 3.9948 20.0052C4.47928 20.4897 5.10692 20.7966 6.06179 20.9836C7.03759 21.1747 8.2972 21.2303 10.0064 21.2448C10.4206 21.2483 10.7535 21.5869 10.75 22.0011C10.7465 22.4153 10.4078 22.7483 9.99364 22.7448C8.28967 22.7303 6.90193 22.6767 5.77345 22.4556C4.62404 22.2305 3.69048 21.8222 2.93414 21.0659C2.03933 20.1711 1.63399 19.031 1.43975 17.5863C1.24998 16.1748 1.24999 14.3658 1.25 12.0574V11.9426C1.24999 9.63423 1.24998 7.82519 1.43975 6.41371C1.63399 4.96897 2.03933 3.82895 2.93414 2.93414C3.82895 2.03933 4.96897 1.63399 6.41371 1.43975C7.82519 1.24998 9.63423 1.24999 11.9426 1.25ZM2.85681 7.25H6.58829L9.44439 2.76185C8.31691 2.77915 7.39205 2.82171 6.61358 2.92637C5.33517 3.09825 4.56445 3.42514 3.9948 3.9948C3.42514 4.56445 3.09825 5.33517 2.92637 6.61358C2.89922 6.81554 2.87624 7.02735 2.85681 7.25ZM11.2072 2.75032C11.1886 2.80268 11.1638 2.85379 11.1327 2.90266L8.36626 7.25H13.0883L15.9189 2.80191C14.8557 2.7507 13.5747 2.75 12 2.75C11.727 2.75 11.4629 2.75002 11.2072 2.75032ZM17.5982 2.95698L14.8663 7.25H21.1432C21.11 6.86849 21.0665 6.52079 21.0097 6.20174C20.8255 5.16648 20.5122 4.50178 20.0052 3.9948C19.4677 3.45731 18.7512 3.13594 17.5982 2.95698ZM18.4488 12.988C19.4328 12.004 21.0281 12.004 22.012 12.988C22.996 13.9719 22.996 15.5672 22.012 16.5512L17.7302 20.833C17.4994 21.0639 17.3387 21.2246 17.1585 21.3652C16.9467 21.5304 16.7175 21.6721 16.4749 21.7877C16.2686 21.886 16.0531 21.9578 15.7434 22.061L13.8653 22.687C13.4243 22.834 12.9381 22.7192 12.6095 22.3905C12.2808 22.0619 12.166 21.5757 12.313 21.1347L12.939 19.2567C13.0422 18.947 13.114 18.7314 13.2123 18.5251C13.3279 18.2826 13.4696 18.0533 13.6348 17.8415C13.7753 17.6613 13.936 17.5006 14.1669 17.2698L18.4488 12.988ZM20.9514 14.0486C20.5532 13.6505 19.9076 13.6505 19.5095 14.0486L19.3777 14.1803C19.3829 14.1966 19.3885 14.2133 19.3944 14.2305C19.4762 14.4661 19.6315 14.7784 19.9266 15.0734C20.2216 15.3685 20.5339 15.5238 20.7695 15.6056C20.7867 15.6115 20.8034 15.6171 20.8197 15.6223L20.9514 15.4905C21.3495 15.0924 21.3495 14.4468 20.9514 14.0486ZM19.6857 16.7562C19.4193 16.6068 19.1372 16.4054 18.8659 16.1341C18.5946 15.8628 18.3932 15.5807 18.2438 15.3143L15.2578 18.3003C14.9856 18.5725 14.8944 18.6655 14.8176 18.764C14.7193 18.8899 14.6351 19.0262 14.5664 19.1704C14.5127 19.2831 14.4703 19.4063 14.3485 19.7715L14.0029 20.8084L14.1916 20.9971L15.2285 20.6515C15.5937 20.5297 15.7169 20.4873 15.8296 20.4336C15.9738 20.3649 16.1101 20.2807 16.236 20.1824C16.3345 20.1056 16.4275 20.0144 16.6997 19.7422L19.6857 16.7562Z"
+                      clip-rule="evenodd"></path>
+                  </svg>
+                </div>
+                <div class="col-md-9">
+                  <div class="card-body">
+                    <h5 class="card-title">Video Editing</h5>
+                    <div class="my-2">
+                      <h7>95%</h7>
+                    </div>
+                    <div class="progress" role="progressbar" aria-label="Basic example" aria-valuenow="75"
+                      aria-valuemin="0" aria-valuemax="100" class="ml-1 my-1">
+                      <div class="progress-bar progress-bar-striped progress-bar-animated" style="width: 95%">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-      <!-- Grid container -->
-
-      <!-- Copyright -->
-      <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
-        Copyright © 2023 Megh Patel. All rights reserved.
+    </section>
+    <!-- ======= Experience Section ======= -->
+    <section id="experience" class="experience">
+      <div class="container">
+        <div class="section-title">
+          <hr>
+          <h1 class="text-center mt-3" data-aos="zoom-in">Experience</h1>
+          <hr>
+        </div>
+        <div class="container px-3">
+          <ul class="timeline">
+            <li class="timeline-item mb-5">
+              <h5 class="fw-bold" data-aos="fade-left">Oasis Infobyte</h5>
+              <p class="text-muted mb-2 fw-bold" data-aos="fade-left">Web Development and Designing Intern</p>
+              <p class="text-muted mb-2 fw-bold" data-aos="fade-left">March 2023 - April 2023</p>
+            </li>
+            <li class="timeline-item mb-5">
+              <h5 class="fw-bold" data-aos="fade-left">Bharat Intern</h5>
+              <p class="text-muted mb-2 fw-bold" data-aos="fade-left">Web Developer Intern</p>
+              <p class="text-muted mb-2 fw-bold" data-aos="fade-left">October 2023 - November 2023</p>
+            </li>
+            <li class="timeline-item mb-5">
+              <h5 class="fw-bold" data-aos="fade-left">360 Design</h5>
+              <p class="text-muted mb-2 fw-bold" data-aos="fade-left">Web Developer Intern</p>
+              <p class="text-muted mb-2 fw-bold" data-aos="fade-left">June 2024 - July 2024</p>
+            </li>
+            <!-- Add More if needed from first li tag -->
+          </ul>
+        </div>
       </div>
-      <div class="text-center p-2" style="background-color: rgba(0, 0, 0, 0.2);">
-        <sub>Made with &#10084; by <a href="https://megh2711.github.io/meghthebaadal.com/"
-            style="text-decoration: none; color: #fff;"><b>Megh
-              Patel</b></a></sub>
+    </section>
+    <!-- ======= Education Section ======= -->
+    <section id="education" class="education">
+      <div class="container">
+        <div class="section-title">
+          <hr>
+          <h1 class="text-center mt-3" data-aos="zoom-in">Education</h1>
+          <hr>
+        </div>
+        <div class="container px-3">
+          <ul class="timeline">
+            <li class="timeline-item mb-5">
+              <h5 class="fw-bold" data-aos="fade-left">Bachelor of Engineering (B.E.)</h5>
+              <p class="text-muted mb-2 fw-bold" data-aos="fade-left">October 2021 - 2025 (Expected)</p>
+              <p class="text-justify" data-aos="fade-left">
+                I am currently working towards my Bachelor of Engineering degree in Computer Engineering at
+                <b>Gandhinagar Institute of Technology (Gandhinagar University) Affiliated By Gujarat Technological
+                  University</b>.
+                Throughout my academic
+                journey, I have gained valuable knowledge in various areas of computer engineering. I have had the
+                opportunity to delve into subjects such as digital logic design, programming languages including Java,
+                Python, C, and others. This diverse curriculum,
+                combined with hands-on projects, collaborative learning experiences, and exposure to industry trends,
+                has not only deepened my passion for computer engineering but also equipped me with technical skills
+                and a problem-solving mindset. I am confident that my education is preparing me for a successful and
+                rewarding career in this dynamic field.
+              </p>
+            </li>
+            <!-- Add More if needed from first li tag -->
+          </ul>
+        </div>
       </div>
-      <!-- Copyright -->
-    </footer>
+    </section>
+    <!-- ======= Testimonial Section ======= -->
+    <!-- ======= Testimonial Image Size - 300 px x 300 px ======= -->
+    <section id="testimonial" class="testimonial mb-4">
+      <div class="container mt-5 mb-5">
+        <hr>
+        <div class="section-title">
+          <h1 class="text-center mt-3" data-aos="zoom-in">Testimonials</h1>
+          <hr>
+        </div>
+        <div class="row">
+          <div class="col-12">
+            <div class="card h-100 text-center border-0">
+              <div class="card-header my-2" style="background: transparent; border: none;">
+                <img src="IMAGES/testimonial/hitesh-kachella-ti.jpg" class="rounded-circle" width="80"
+                  data-aos="zoom-in">
+              </div>
+              <div class="card-body">
+                <h5 class="card-title list-group-item my-3" data-aos="zoom-in">Hitesh Kachhela</h5>
+                <span class="fw-bold fs-7 list-group-item  my-3" data-aos="zoom-in">Business Owner and Android Trainer
+                  at Praxware
+                  Technologies</span>
+                <p class="card-text my-3 list-group-item my-4" data-aos="zoom-in">Great intelligent student that have
+                  done all practical
+                  that perform in the during the Web Development with Python using Django Framework Workshop.
+                </p>
+              </div>
+              <div class="card-footer" style="background: transparent; border: none;">
+                <div class="ratings" data-aos="zoom-in">
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </section>
   </div>
+  <!-- ======= Contact Me Section ======= -->
+  <section id="contactme" class="contactme">
+    <div class="container mb-3">
+      <div class="section-title">
+        <hr>
+        <h1 class="text-center mt-3" data-aos="zoom-in">Contact Me</h1>
+        <hr>
+        <p class="text-center fst-italic" data-aos="zoom-in">Interested in learning more about me or providing
+          valuable
+          feedback? Feel
+          free
+          to reach out by clicking the button below.</p>
+      </div>
+      <div class="text-center">
+        <a class="btn btn-primary" href="contactme.html" role="button" data-aos="zoom-in">Contact Me</a>
+      </div>
+    </div>
+  </section>
+  <!--Footer-->
+  <footer class="bg-dark text-center text-white">
+    <div class="container p-4 pb-0">
+      <!-- Section: Social media -->
+      <section class="mb-4">
+        <!-- Facebook -->
+        <a class="btn btn-floating rounded-circle border-0 fs-4"
+          onclick="window.open('https://www.facebook.com/profile.php?id=100088289332716','_blank')" role="button"><i
+            class="bi bi-facebook"></i></a>
+
+        <!-- Twitter -->
+        <a class="btn btn-floating rounded-circle border-0 fs-4"
+          onclick="window.open('https://twitter.com/meghthebaadal','_blank')" role="button"><i
+            class="bi bi-twitter"></i></a>
+
+        <!-- Instagram -->
+        <a class="btn btn-floating rounded-circle border-0 fs-4"
+          onclick="window.open('https://www.instagram.com/megh_vekaria','_blank')" role="button"><i
+            class="bi bi-instagram"></i></a>
+
+        <!-- Linkedin -->
+        <a class="btn btn-floating rounded-circle border-0 fs-4"
+          onclick="window.open('https://www.linkedin.com/in/megh-patel-7838a1229/','_blank')" role="button"><i
+            class="bi bi-linkedin"></i></a>
+
+        <!-- Github -->
+        <a class="btn btn-floating rounded-circle border-0 fs-4"
+          onclick="window.open('https://github.com/MeGH2711 ','_blank')" role="button"><i class="bi bi-github"></i></a>
+
+        <!-- Youtube -->
+        <a class="btn btn-floating rounded-circle border-0 fs-4"
+          onclick="window.open('https://www.youtube.com/channel/UCGy8vwjgLsIl5c10_TAhGLA?sub_confirmation=1','_blank')"
+          role="button"><i class="bi bi-youtube"></i></a>
+
+      </section>
+      <!-- Section: Social media -->
+    </div>
+    <!-- Grid container -->
+
+    <!-- Copyright -->
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+      Copyright © 2023 Megh Patel. All rights reserved.
+    </div>
+    <div class="text-center p-2" style="background-color: rgba(0, 0, 0, 0.2);">
+      <sub>Made with &#10084; by <a href="https://megh2711.github.io/meghthebaadal.com/"
+          style="text-decoration: none; color: #fff;"><b>Megh
+            Patel</b></a></sub>
+    </div>
+    <!-- Copyright -->
+  </footer>
+  <script>
+    AOS.init();
+  </script>
 </body>
 
 </html>

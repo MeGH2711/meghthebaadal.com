@@ -16,6 +16,21 @@
   <script type='text/javascript'
     src='https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js'></script>
   <link rel="stylesheet" href="scrollbarbutton.css">
+  <!-- Imported Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+    rel="stylesheet">
+  <!-- AOS Animations -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <style>
+    body {
+      font-family: "Ubuntu", sans-serif;
+      overflow-x: hidden;
+    }
+  </style>
   </style>
 </head>
 
@@ -23,7 +38,8 @@
   <!-- ======= Navigation Bar ======= -->
   <nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
     <div class="container-fluid">
-      <a class="navbar-brand" href="index.html"><img src="IMAGES/megh-patel-logo/megh-patel-white.png" width="145"></a>
+      <a class="navbar-brand" href="index.html"><img src="IMAGES/megh-patel-logo/megh-patel-white.png"
+          data-aos="zoom-in" width="145"></a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -31,33 +47,38 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link" aria-current="page" href="index.html">Home</a>
+            <a class="nav-link" aria-current="page" href="index.html" data-aos="zoom-in">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="gallery.html">Photos</a>
+            <a class="nav-link" href="gallery.html" data-aos="zoom-in">Photos</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="projects.html">Projects</a>
+            <a class="nav-link active" aria-current="page" href="projects.html" data-aos="zoom-in">Projects</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link"
-              onclick="window.open('https://www.youtube.com/channel/UCGy8vwjgLsIl5c10_TAhGLA','_blank')">YouTube</a>
+            <a class="nav-link" aria-current="page" href="certification.html"
+              data-aos="zoom-in">Certifications</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="contactme.html">Contact Me</a>
+            <a class="nav-link" href="contactme.html" data-aos="zoom-in">Contact Me</a>
           </li>
         </ul>
+        <a class="btn btn-outline-light mr-3 my-2" href="Megh CV.pdf" role="button" target="_blank"
+          data-aos="zoom-in">Resume</a>
       </div>
     </div>
   </nav>
   <div class="container">
-    <h2 class="text-center mt-3">Projects</h2>
-    <p class="text-center mt-3">This is just a glimpse of some of the projects I have worked on. Through these projects,
+    <div class="page-heading text-center my-4">
+      <h1 data-aos="zoom-in">Projects</h1>
+    </div>
+    <hr>
+    <p class="text-center mt-3" data-aos="fade-up">This is just a glimpse of some of the projects I have worked on. Through these projects,
       I have eagerly explored various technologies and their applications, continuously expanding my knowledge and
       expertise.</p>
-    <div class="card mt-4 text-center">
+    <div class="card mt-4 text-center" data-aos="fade-up">
       <h5 class="card-header">Mega-Project</h5>
-      <img src="IMAGES/projects/debakers.jpg" class="card-img-top">
+      <img src="IMAGES/projects/debakers.jpg" class="card-img-top" data-aos="fade-up">
       <div class="card-body">
         <h5 class="card-title">De Baker's & More Website</h5>
         <p class="card-text">As a website designer, I had the privilege of creating a visually appealing and
@@ -76,29 +97,7 @@
         </div>
       </div>
     </div>
-    <div class="card mt-4 text-center">
-      <h5 class="card-header">First React Project</h5>
-      <img src="IMAGES\projects\textutils.jpg" class="card-img-top">
-      <div class="card-body">
-        <h3 class="card-title">TextUtils - Text Transformer</h3>
-        <p class="card-text">TextUtils is an text transform web application created with the help of <b>ReactJS</b>
-          which uses the the input text to transform it into an Uppercase, Lowercase, Removes Extra Spaces from the
-          given text paragraph or line and also uses text to speach translation. This was the very first project made by
-          me on ReactJS. This project was built along with <a href="https://www.codewithharry.com/"
-            style="text-decoration: none; font-weight: bold; color: #A0B5BD;">CodeWithHarry's</a> guidance.</p>
-        <a onclick="window.open('https://megh2711.github.io/reactjscwh.com/','_blank')" role="button"
-          class="btn btn-primary mb-3">Visit Site</a>
-        <div class="container">
-          <h6>Built using</h6>
-          <svg viewBox="0 0 24 24" fill="currentColor" height="2em" width="2em">
-            <path fill="none" d="M0 0h24v24H0z" />
-            <path
-              d="M14.448 16.24a21.877 21.877 0 01-1.747 2.175c1.672 1.623 3.228 2.383 4.09 1.884.864-.498.983-2.225.414-4.484-.853.19-1.78.334-2.757.425zm-1.31.087a27.512 27.512 0 01-2.276 0c.377.492.758.948 1.138 1.364.38-.416.76-.872 1.138-1.364zm5.04-7.894c2.665.764 4.405 2.034 4.405 3.567 0 1.533-1.74 2.803-4.405 3.567.67 2.69.441 4.832-.886 5.598-1.328.767-3.298-.105-5.292-2.03-1.994 1.925-3.964 2.797-5.292 2.03-1.327-.766-1.557-2.908-.886-5.598-2.665-.764-4.405-2.034-4.405-3.567 0-1.533 1.74-2.803 4.405-3.567-.67-2.69-.441-4.832.886-5.598 1.328-.767 3.298.105 5.292 2.03 1.994-1.925 3.964-2.797 5.292-2.03 1.327.766 1.557 2.908.886 5.598zm-.973-.248c.57-2.26.45-3.986-.413-4.484-.863-.499-2.419.261-4.09 1.884a22.049 22.049 0 011.746 2.175c.978.09 1.904.234 2.757.425zm-10.41 7.63c-.57 2.26-.45 3.986.413 4.484.863.499 2.419-.261 4.09-1.884a21.877 21.877 0 01-1.746-2.175 21.877 21.877 0 01-2.757-.425zm4.067-8.142a27.512 27.512 0 012.276 0A20.523 20.523 0 0012 6.31c-.38.416-.76.872-1.138 1.364zm-1.31.087A21.877 21.877 0 0111.3 5.585C9.627 3.962 8.07 3.202 7.209 3.701c-.864.498-.983 2.225-.414 4.484.853-.19 1.78-.334 2.757-.425zm4.342 7.52A25.368 25.368 0 0015.787 12a25.368 25.368 0 00-1.893-3.28 25.368 25.368 0 00-3.788 0A25.368 25.368 0 008.213 12a25.368 25.368 0 001.893 3.28 25.368 25.368 0 003.788 0zm1.284-.131c.615-.08 1.2-.183 1.75-.304a20.523 20.523 0 00-.612-1.667 27.512 27.512 0 01-1.138 1.97zM8.822 8.85c-.615.08-1.2.183-1.75.304.17.536.374 1.094.612 1.667a27.512 27.512 0 011.138-1.97zm-1.75 5.994c.55.121 1.135.223 1.75.304a27.512 27.512 0 01-1.138-1.97 20.42 20.42 0 00-.612 1.666zm-.978-.245c.261-.834.6-1.708 1.01-2.6a22.002 22.002 0 01-1.01-2.6c-2.242.637-3.677 1.604-3.677 2.6s1.435 1.963 3.677 2.6zm10.834-5.445a20.808 20.808 0 00-1.75-.304 27.511 27.511 0 011.138 1.97c.238-.572.442-1.13.612-1.666zm.978.245c-.261.834-.6 1.708-1.01 2.6.41.892.749 1.766 1.01 2.6 2.242-.637 3.677-1.604 3.677-2.6s-1.435-1.963-3.677-2.6zM12 13.88a1.88 1.88 0 110-3.76 1.88 1.88 0 010 3.76z" />
-          </svg>
-        </div>
-      </div>
-    </div>
-    <div class="card mt-4 text-center">
+    <div class="card mt-4 text-center" data-aos="fade-up">
       <h5 class="card-header">Bharat Intern Project</h5>
       <img src="IMAGES\projects\biportfolio.jpg" class="card-img-top">
       <div class="card-body">
@@ -174,6 +173,9 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N"
     crossorigin="anonymous"></script>
+  <script>
+    AOS.init();
+  </script>
 </body>
 
 </html>
