@@ -23,63 +23,56 @@
       emailjs.init("BGFVdNjL1KcWa2STN");
     })();
   </script>
-  <link rel="stylesheet" href="scrollbarbutton.css">
+  <!-- External CSS -->
+  <link rel="stylesheet" href="commonstyles.css">
   <!-- Imported Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
     href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
     rel="stylesheet">
-  <!-- AOS Animations -->
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <style>
-    body {
-      font-family: "Ubuntu", sans-serif;
-      overflow-x: hidden;
-    }
-  </style>
 </head>
 
 <body>
   <!-- ======= Navigation Bar ======= -->
-  <nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
+  <nav class="navbar navbar-bg navbar-expand-lg py-3 sticky-top">
     <div class="container-fluid">
-      <a class="navbar-brand" href="index.html"><img src="IMAGES/megh-patel-logo/megh-patel-white.png"
-          data-aos="zoom-in" width="145"></a>
+      <a class="navbar-brand" href="index.html"><img src="IMAGES/megh-patel-logo/megh-patel-white.png" width="145"></a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item">
-            <a class="nav-link" aria-current="page" href="index.html" data-aos="zoom-in">Home</a>
+        <ul class="navbar-nav d-flex justify-content-center m-auto mb-2 mb-lg-0">
+          <li class="nav-item my-1 mx-3 text-center">
+            <a class="nav-link" aria-current="page" href="index.html">Home</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="gallery.html" data-aos="zoom-in">Photos</a>
+          <li class="nav-item my-1  mx-3 text-center">
+            <a class="nav-link" href="gallery.html">Photos</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" aria-current="page" href="projects.html" data-aos="zoom-in">Projects</a>
+          <li class="nav-item my-1  mx-3 text-center">
+            <a class="nav-link" aria-current="page" href="projects.html">Projects</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" aria-current="page" href="certification.html"
-              data-aos="zoom-in">Certifications</a>
+          <li class="nav-item my-1  mx-3 text-center">
+            <a class="nav-link" aria-current="page" href="certification.html">Certifications</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link active" href="contactme.html" data-aos="zoom-in">Contact Me</a>
+          <li class="nav-item my-1  mx-3 text-center">
+            <a class="nav-link active" href="contactme.html">Contact Me</a>
           </li>
         </ul>
-        <a class="btn btn-outline-light mr-3 my-2" href="Megh CV.pdf" role="button" target="_blank"
-          data-aos="zoom-in">Resume</a>
+        <div class="text-center">
+          <a class="btn btn-outline-light border-3 rounded-pill px-4" href="Megh CV.pdf" role="button"
+            target="_blank">Resume</a>
+        </div>
       </div>
     </div>
   </nav>
   <div class="container">
-    <h1 class="h1 font-weight-bold text-center my-4" data-aos="zoom-in">Contact Me</h1>
-    <p class="text-center mx-auto mb-5" data-aos="zoom-in">Do you have any questions? Please do not hesitate to contact me directly. I will
+    <h1 class="h1 font-weight-bold text-center my-4">Contact Me</h1>
+    <p class="text-center mx-auto mb-5">Do you have any questions? Please do not hesitate to contact
+      me directly. I will
       come back to you within a matter of hours to help you and clear your doubts.</p>
-    <div class="row d-flex justify-content-center" data-aos="fade-up">
+    <div class="row d-flex justify-content-center">
       <div class="row my-3">
         <div class="col">
           <div class="form-floating">
@@ -197,7 +190,6 @@
     integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N"
     crossorigin="anonymous"></script>
   <script>
-    AOS.init();
     const toastTrigger = document.getElementById('liveToastBtn')
     const toastLiveExample = document.getElementById('liveToast')
 

@@ -21,7 +21,7 @@
     integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
   <!-- External CSS -->
-  <link rel="stylesheet" href="scrollbarbutton.css">
+  <link rel="stylesheet" href="commonstyles.css">
   <!-- Imported Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -35,11 +35,6 @@
 
     .bg-violet {
       background-color: violet;
-    }
-
-    body {
-      font-family: "Ubuntu", sans-serif;
-      overflow-x: hidden;
     }
 
     .landingimage {
@@ -330,13 +325,6 @@
     .landing {
       height: 100vh;
     }
-
-    #btn-back-to-top {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      display: none;
-    }
   </style>
   <!-- CSS Stylesheet End -->
 
@@ -347,13 +335,45 @@
   <script type='text/javascript' src='https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js'></script>
   <script type='text/javascript'
     src='https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js'></script>
-  <script type="text/javascript" src="script.js"></script>
+  <script type="text/javascript" src="index.js"></script>
   <!-- JavaScript Script End -->
 </head>
 
 <body>
   <button type="button" class="btn btn-transparent btn-floating btn-lg rounded-circle" id="btn-back-to-top">
     <i class="bi bi-arrow-up-circle-fill fs-1"></i></button>
+  <nav class="navbar navbar-bg navbar-expand-lg py-3 rounded-bottom-3">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html"><img src="IMAGES/megh-patel-logo/megh-patel-white.png" width="145"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav d-flex navbar-nav-scroll justify-content-center m-auto mb-2 mb-lg-0">
+          <li class="nav-item my-1 mx-3 text-center">
+            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+          </li>
+          <li class="nav-item my-1  mx-3 text-center">
+            <a class="nav-link" href="gallery.html">Photos</a>
+          </li>
+          <li class="nav-item my-1  mx-3 text-center">
+            <a class="nav-link" aria-current="page" href="projects.html">Projects</a>
+          </li>
+          <li class="nav-item my-1  mx-3 text-center">
+            <a class="nav-link" aria-current="page" href="certification.html">Certifications</a>
+          </li>
+          <li class="nav-item my-1  mx-3 text-center">
+            <a class="nav-link" href="contactme.html">Contact Me</a>
+          </li>
+        </ul>
+        <div class="text-center">
+          <a class="btn btn-outline-light border-3 rounded-pill px-4" href="Megh CV.pdf" role="button"
+            target="_blank">Resume</a>
+        </div>
+      </div>
+    </div>
+  </nav>
   <div class="area">
     <ul class="circles">
       <li></li>
@@ -377,40 +397,6 @@
         <div class="side right"></div>
       </div>
     </div>
-    <!-- ======= Navigation Bar ======= -->
-    <nav class="navbar navbar-expand-lg bg-body-tertiary item1 py-3" data-bs-theme="dark">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="index.html"><img src="IMAGES/megh-patel-logo/megh-patel-white.png"
-            width="145"></a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item my-1 text-center">
-              <a class="nav-link active" aria-current="page" href="index.html">Home</a>
-            </li>
-            <li class="nav-item my-1 text-center">
-              <a class="nav-link" href="gallery.html">Photos</a>
-            </li>
-            <li class="nav-item my-1 text-center">
-              <a class="nav-link" aria-current="page" href="projects.html">Projects</a>
-            </li>
-            <li class="nav-item my-1 text-center">
-              <a class="nav-link" aria-current="page" href="certification.html">Certifications</a>
-            </li>
-            <li class="nav-item my-1 text-center">
-              <a class="nav-link" href="contactme.html">Contact Me</a>
-            </li>
-          </ul>
-          <div class="text-center">
-            <a class="btn btn-outline-light border-3 rounded-pill px-4" href="Megh CV.pdf" role="button"
-              target="_blank">Resume</a>
-          </div>
-        </div>
-      </div>
-    </nav>
     <!-- Landing Page Main Image with Name and Typewriter Animation for Mobile Screen -->
     <div class="container text-center landing d-flex align-items-center d-block d-lg-none">
       <div class="row row-cols-1">
@@ -864,7 +850,7 @@
           to reach out by clicking the button below.</p>
       </div>
       <div class="text-center">
-        <a class="btn btn-primary revealdown" href="contactme.html" role="button">Contact Me</a>
+        <a class="btn btn-primary revealdown rounded-pill" href="contactme.html" role="button">Contact Me</a>
       </div>
     </div>
   </section>
@@ -944,16 +930,42 @@
       opacity: null,
       delay: 100,
     };
+    var item1 = {
+      distance: '150%',
+      origin: 'bottom',
+      opacity: 0,
+      delay: 500,
+    };
+    var item2 = {
+      distance: '150%',
+      origin: 'bottom',
+      opacity: 0,
+      delay: 1000,
+    };
+    var item3 = {
+      distance: '150%',
+      origin: 'bottom',
+      opacity: 0,
+      delay: 1500,
+    };
+    var item4 = {
+      distance: '150%',
+      origin: 'bottom',
+      opacity: 0,
+      delay: 2000,
+    };
+
 
     ScrollReveal().reveal('.revealup', slideUp);
     ScrollReveal().reveal('.revealdown', slideDown);
     ScrollReveal().reveal('.revealright', slideRight);
     ScrollReveal().reveal('.revealleft', slideLeft);
-    ScrollReveal().reveal('.item1', { delay: 250 });
-    ScrollReveal().reveal('.item2', { delay: 500 });
-    ScrollReveal().reveal('.item3', { delay: 750 });
-    ScrollReveal().reveal('.item4', { delay: 1000 });
-    ScrollReveal().reveal('.landingimage', { delay: 1250 });
+    ScrollReveal().reveal('.navbar', { delay: 250 });
+    ScrollReveal().reveal('.item1', item1);
+    ScrollReveal().reveal('.item2', item2);
+    ScrollReveal().reveal('.item3', item3);
+    ScrollReveal().reveal('.item4', item4);
+    ScrollReveal().reveal('.landingimage', { delay: 2500 });
     ScrollReveal().reveal('.revealleftd1', slideLeftd1);
 
     window.addEventListener('scroll', () => {
