@@ -27,6 +27,11 @@ body {
     font-family: "Ubuntu", sans-serif;
 }
 
+/* Justify text Class */
+.text-justify {
+    text-align: justify;
+}
+
 /* BACK TO TOP BUTTON */
 
 #btn-back-to-top {

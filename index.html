@@ -54,7 +54,7 @@
       }
 
       50% {
-        transform: translate(0, 15px);
+        transform: translate(0, 5px);
       }
 
       100% {
@@ -325,6 +325,23 @@
     .landing {
       height: 100vh;
     }
+
+    .section-heading {
+      font-size: 50px;
+    }
+
+    .section-heading1 {
+      font-size: 45px;
+    }
+
+
+    @media (min-width: 992px) {
+
+      .section-heading,
+      .section-heading1 {
+        font-size: 75px;
+      }
+    }
   </style>
   <!-- CSS Stylesheet End -->
 
@@ -342,7 +359,7 @@
 <body>
   <button type="button" class="btn btn-transparent btn-floating btn-lg rounded-circle" id="btn-back-to-top">
     <i class="bi bi-arrow-up-circle-fill fs-1"></i></button>
-  <nav class="navbar navbar-bg navbar-expand-lg py-3 rounded-bottom-3">
+  <nav class="navbar navbar-bg navbar-expand-lg py-3 rounded-bottom-3 sticky-top">
     <div class="container-fluid">
       <a class="navbar-brand" href="index.html"><img src="IMAGES/megh-patel-logo/megh-patel-white.png" width="145"></a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
@@ -426,7 +443,7 @@
 
           <!-- Twitter -->
           <a class="btn btn-floating rounded-circle border-0 fs-5 ltps" href="https://twitter.com/meghthebaadal"
-            target="_blank" role="button"><i class="bi bi-twitter-x"></i></a>
+            target="_blank" role="button"><i class="bi bi-twitter"></i></a>
 
           <!-- Instagram -->
           <a class="btn btn-floating rounded-circle border-0 fs-5 ltps" href="https://www.instagram.com/megh_vekaria"
@@ -536,9 +553,16 @@
     <section id="about" class="about mb-4">
       <div class="container">
         <div class="section-title">
-          <h1 class="text-center mt-3 revealdown">About</h1>
-          <hr>
-          <p class="fs-6 revealdown">Hi! I am <span class="fw-bold">Megh Patel</span>, currently pursuing my
+          <div class="row my-4">
+            <div class="col-lg-3">
+              <h1 class="revealdown section-heading">About</h1>
+            </div>
+            <div class="col-lg-9 d-flex align-items-center">
+              <hr class="w-100 rounded-1" style="height: 5px;">
+            </div>
+          </div>
+          <p class="fs-6 revealdown text-justify">Hi! I am <span class="fw-bold">Megh Patel</span>, currently pursuing
+            my
             bachelors degree in Computer
             Engineering at <a style="font-weight: bold; cursor: pointer;"
               onclick="window.open('https://gandhinagaruni.ac.in/','_blank')">Gandhinagar
@@ -555,7 +579,7 @@
           <div class="col-lg-8 pt-4 pt-lg-0">
             <h3 class="revealdown">UI/UX Designer &amp; Web Developer</h3>
             <hr>
-            <p class="fst-italic revealdown">
+            <p class="fst-italic revealdown text-justify">
               I have keen interest in Web Designing and Web Development and have been working on many such projects to
               gain more experience towards it.
             </p>
@@ -576,15 +600,13 @@
                 </ul>
               </div>
             </div>
-            <p class="revealdown">
+            <p class="revealdown text-justify">
               I am immersing myself in a wide array of subjects, ranging from programming languages to computer
-              systems
-              architecture, and I'm actively engaging in practical learning by participating in lab work, projects,
-              and
-              internships. Beyond my academic pursuits, I am an enthusiastic participant in various extracurricular
-              activities, including clubs and organizations that align with my field of study.
+              systems architecture, and I'm actively engaging in practical learning by participating in lab work,
+              projects, and internships. Beyond my academic pursuits, I am an enthusiastic participant in various
+              extracurricular activities, including clubs and organizations that align with my field of study.
             </p>
-            <p class="revealdown">
+            <p class="revealdown text-justify">
               Moreover, I have a genuine curiosity for technology and an unyielding passion for making a meaningful
               impact on the world through my work. On top of all this, I have an additional facet to my personality—I
               absolutely love hosting a diverse range of events, which adds an extra layer of excitement to my
@@ -598,15 +620,18 @@
     <section id="skills" class="skills mb-4">
       <div class="container">
         <div class="section-title">
-          <hr>
-          <h1 class="text-center mt-3 revealdown">Skills</h1>
-          <hr>
-          <p class="revealdown">I have a deep understanding of the technical aspects of these fields, as well as a
-            creative eye for
-            design.
-            I have a keen interest in building things from scratch. Whether working on my projects or collaborating
-            projects with the team, my passion for coding and web designing keeps me motivated to learn more and
-            improvize my skills.</p>
+          <div class="row my-4">
+            <div class="col-lg-3">
+              <h1 class="revealdown section-heading">Skills</h1>
+            </div>
+            <div class="col-lg-9 d-flex align-items-center">
+              <hr class="w-100 rounded-1" style="height: 5px;">
+            </div>
+          </div>
+          <p class="revealdown text-justify">I have a deep understanding of the technical aspects of these fields, as
+            well as a creative eye for design. I have a keen interest in building things from scratch. Whether working
+            on my projects or collaborating projects with the team, my passion for coding and web designing keeps me
+            motivated to learn more and improvize my skills.</p>
         </div>
         <div class="row">
           <div class="col-lg-6">
@@ -716,14 +741,19 @@
     <section id="experience" class="experience">
       <div class="container">
         <div class="section-title">
-          <hr>
-          <h1 class="text-center mt-3 revealdown">Experience</h1>
-          <hr>
+          <div class="row my-4">
+            <div class="col-lg-4">
+              <h1 class="revealdown section-heading">Experience</h1>
+            </div>
+            <div class="col-lg-8 d-flex align-items-center">
+              <hr class="w-100 rounded-1" style="height: 5px;">
+            </div>
+          </div>
         </div>
         <div class="container px-3">
           <ul class="timeline">
             <li class="timeline-item mb-5">
-              <h5 class="fw-bold revealdown">360 Design (Ongoing)</h5>
+              <h5 class="fw-bold revealdown">360 Design</h5>
               <p class="text-muted mb-2 fw-bold revealdown">Web Developer Intern</p>
               <p class="text-muted mb-2 fw-bold revealdown">June 2024 - July 2024</p>
               <p class="text-justify revealdown">
@@ -769,9 +799,14 @@
     <section id="education" class="education">
       <div class="container">
         <div class="section-title">
-          <hr>
-          <h1 class="text-center mt-3 revealdown">Education</h1>
-          <hr>
+          <div class="row my-4">
+            <div class="col-lg-4">
+              <h1 class="revealdown section-heading">Education</h1>
+            </div>
+            <div class="col-lg-8 d-flex align-items-center">
+              <hr class="w-100 rounded-1" style="height: 5px;">
+            </div>
+          </div>
         </div>
         <div class="container px-3">
           <ul class="timeline">
@@ -801,15 +836,20 @@
     <!-- ======= Testimonial Image Size - 300 px x 300 px ======= -->
     <section id="testimonial" class="testimonial mb-4">
       <div class="container mt-5 mb-5">
-        <hr>
         <div class="section-title">
-          <h1 class="text-center mt-3 revealdown">Testimonials</h1>
-          <hr>
+          <div class="row my-4">
+            <div class="col-lg-5">
+              <h1 class="revealdown section-heading1">Testimonials</h1>
+            </div>
+            <div class="col-lg-7 d-flex align-items-center">
+              <hr class="w-100 rounded-1" style="height: 5px;">
+            </div>
+          </div>
         </div>
         <div class="row">
           <div class="col-12">
             <div class="card h-100 text-center border-0 bg-transparent revealdown">
-              <div class="card-header my-2 bg-transparent">
+              <div class="card-header my-2 bg-transparent border-0">
                 <img src="IMAGES/testimonial/hitesh-kachella-ti.jpg" class="rounded-circle" width="80">
               </div>
               <div class="card-body">
@@ -818,8 +858,8 @@
                   at Praxware
                   Technologies</span>
                 <p class="card-text my-3 list-group-item my-4">Great intelligent student that have
-                  done all practical
-                  that perform in the during the Web Development with Python using Django Framework Workshop.
+                  done all practical that perform in the during the Web Development with Python using Django Framework
+                  Workshop.
                 </p>
               </div>
               <div class="card-footer" style="background: transparent; border: none;">
@@ -840,9 +880,14 @@
   <section id="contactme" class="contactme">
     <div class="container mb-3">
       <div class="section-title">
-        <hr>
-        <h1 class="text-center mt-3 revealdown">Contact Me</h1>
-        <hr>
+        <div class="row my-4">
+          <div class="col-lg-4">
+            <h1 class="revealdown section-heading">Contact Me</h1>
+          </div>
+          <div class="col-lg-8 d-flex align-items-center">
+            <hr class="w-100 rounded-1" style="height: 5px;">
+          </div>
+        </div>
         <p class="text-center fst-italic revealdown">Interested in knowing more about me or providing
           valuable
           feedback? Feel
