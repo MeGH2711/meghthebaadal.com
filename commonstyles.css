@@ -47,3 +47,29 @@ body {
     backdrop-filter: blur(15px);
     box-shadow: 0 1px 10px rgba(0, 0, 0, 0.9);
 }
+
+/* Fonts Sizing */
+
+.section-heading {
+    font-size: 50px;
+}
+
+.section-heading1 {
+    font-size: 45px;
+}
+
+.page-heading {
+    font-size: 45px;
+}
+
+@media (min-width: 992px) {
+
+    .section-heading,
+    .section-heading1 {
+        font-size: 75px;
+    }
+
+    .page-heading {
+        font-size: 60px;
+    }
+}

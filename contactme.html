@@ -23,6 +23,8 @@
       emailjs.init("BGFVdNjL1KcWa2STN");
     })();
   </script>
+  <!-- Reveal Animation -->
+  <script src="https://unpkg.com/scrollreveal"></script>
   <!-- External CSS -->
   <link rel="stylesheet" href="commonstyles.css">
   <!-- Imported Fonts -->
@@ -68,25 +70,37 @@
     </div>
   </nav>
   <div class="container">
-    <h1 class="h1 font-weight-bold text-center my-4">Contact Me</h1>
-    <p class="text-center mx-auto mb-5">Do you have any questions? Please do not hesitate to contact
+    <div class="page-heading text-center py-1">
+      <div class="row my-5">
+        <div class="col-lg-4 d-flex align-items-center">
+          <hr class="w-100 rounded-1" style="height: 5px;">
+        </div>
+        <div class="col-lg-4">
+          <h1 class="revealdown page-heading">Contact Me</h1>
+        </div>
+        <div class="col-lg-4 d-flex align-items-center">
+          <hr class="w-100 rounded-1" style="height: 5px;">
+        </div>
+      </div>
+    </div>
+    <p class="text-center mx-auto mb-5 revealdown">Do you have any questions? Please do not hesitate to contact
       me directly. I will
       come back to you within a matter of hours to help you and clear your doubts.</p>
     <div class="row d-flex justify-content-center">
       <div class="row my-3">
         <div class="col">
-          <div class="form-floating">
-            <input type="name" class="form-control" id="name" placeholder="name">
+          <div class="form-floating revealdown">
+            <input type="name" class="form-control" id="name" placeholder="name" required>
             <label for="name">Name</label>
           </div>
         </div>
       </div>
       <div class="row my-3">
         <div class="col">
-          <div class="input-group">
+          <div class="input-group revealdown">
             <span class="input-group-text"><i class="bi bi-envelope"></i></span>
             <div class="form-floating">
-              <input type="email" class="form-control" id="email" placeholder="Email">
+              <input type="email" class="form-control" id="email" placeholder="Email" required>
               <label for="email">Email ID</label>
             </div>
           </div>
@@ -94,32 +108,32 @@
       </div>
       <div class="row my-3">
         <div class="col">
-          <div class="form-floating">
-            <input type="text" class="form-control" id="phone" placeholder="Phone Number">
+          <div class="form-floating revealdown">
+            <input type="text" class="form-control" id="phone" placeholder="Phone Number" required>
             <label for="phone">Phone Number</label>
           </div>
         </div>
       </div>
       <div class="row my-3">
         <div class="col">
-          <div class="form-floating">
-            <input type="text" class="form-control" id="subject" placeholder="Subject">
+          <div class="form-floating revealdown">
+            <input type="text" class="form-control" id="subject" placeholder="Subject" required>
             <label for="subject">Subject</label>
           </div>
         </div>
       </div>
       <div class="row my-3">
         <div class="col">
-          <div class="form-floating">
+          <div class="form-floating revealdown">
             <textarea class="form-control" placeholder="Leave a comment here" id="message"
-              style="height: 100px"></textarea>
+              style="height: 100px" required></textarea>
             <label for="message">Message</label>
           </div>
         </div>
       </div>
     </div>
     <div class="container" style="justify-content: center; align-items: center; display: flex;">
-      <button type="submit" class="btn btn-primary mb-3" onclick="SendMail();" data-bs-toggle="modal"
+      <button type="submit" class="btn btn-primary revealdown p-2 mb-3" onclick="SendMail();" data-bs-toggle="modal"
         data-bs-target="#livetoast" id="liveToastBtn">Submit Reponse</button>
     </div>
     <!-- Toast -->
@@ -137,7 +151,7 @@
   </div>
   <!-- ======= Footer ======= -->
   <footer class="bg-dark text-center text-white">
-    <div class="container p-4 pb-0">
+    <div class="container p-4 pb-0 revealdown">
       <!-- Section: Social media -->
       <section class="mb-4">
         <!-- Facebook -->
@@ -199,6 +213,70 @@
         toastBootstrap.show()
       })
     }
+
+    var slideUp = {
+      distance: '150%',
+      origin: 'top',
+      opacity: null,
+    };
+    var slideDown = {
+      distance: '150%',
+      origin: 'bottom',
+      opacity: null,
+    };
+    var slideRight = {
+      distance: '150%',
+      origin: 'right',
+      opacity: null,
+    };
+    var slideLeft = {
+      distance: '150%',
+      origin: 'left',
+      opacity: null,
+    };
+    var slideLeftd1 = {
+      distance: '150%',
+      origin: 'left',
+      opacity: null,
+      delay: 100,
+    };
+    var item1 = {
+      distance: '150%',
+      origin: 'bottom',
+      opacity: 0,
+      delay: 500,
+    };
+    var item2 = {
+      distance: '150%',
+      origin: 'bottom',
+      opacity: 0,
+      delay: 1000,
+    };
+    var item3 = {
+      distance: '150%',
+      origin: 'bottom',
+      opacity: 0,
+      delay: 1500,
+    };
+    var item4 = {
+      distance: '150%',
+      origin: 'bottom',
+      opacity: 0,
+      delay: 2000,
+    };
+
+
+    ScrollReveal().reveal('.revealup', slideUp);
+    ScrollReveal().reveal('.revealdown', slideDown);
+    ScrollReveal().reveal('.revealright', slideRight);
+    ScrollReveal().reveal('.revealleft', slideLeft);
+    ScrollReveal().reveal('.navbar', { delay: 250 });
+    ScrollReveal().reveal('.item1', item1);
+    ScrollReveal().reveal('.item2', item2);
+    ScrollReveal().reveal('.item3', item3);
+    ScrollReveal().reveal('.item4', item4);
+    ScrollReveal().reveal('.landingimage', { delay: 2500 });
+    ScrollReveal().reveal('.revealleftd1', slideLeftd1);
   </script>
 </body>
 

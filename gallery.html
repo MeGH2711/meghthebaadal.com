@@ -12,7 +12,8 @@
   <meta property="og:url" content="https://megh2711.github.io/meghthebaadal.com/">
   <!-- Meta Tags End -->
   <title>Megh Patel</title>
-
+  <!-- Reveal Animation -->
+  <script src="https://unpkg.com/scrollreveal"></script>
   <!--CSS Stylesheets Start-->
   <link rel="icon" type="image/x-icon" href="IMAGES/megh-patel-logo/favicon.png">
   <link href='https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css' rel='stylesheet'>
@@ -40,7 +41,6 @@
   <script type='text/javascript' src='https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js'></script>
   <script type='text/javascript'
     src='https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js'></script>
-  <script type="text/javascript" src="script.js"></script>
   <!-- JavaScript Script End -->
   <!-- Imported Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -51,7 +51,7 @@
 </head>
 
 <body>
-  <nav class="navbar navbar-bg navbar-expand-lg py-3 sticky-top">
+  <nav class="navbar navbar-bg navbar-expand-lg py-3 rounded-bottom-3 sticky-top">
     <div class="container-fluid">
       <a class="navbar-brand" href="index.html"><img src="IMAGES/megh-patel-logo/megh-patel-white.png" width="145"></a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
@@ -59,7 +59,7 @@
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav d-flex justify-content-center m-auto mb-2 mb-lg-0">
+        <ul class="navbar-nav d-flex navbar-nav-scroll justify-content-center m-auto mb-2 mb-lg-0">
           <li class="nav-item my-1 mx-3 text-center">
             <a class="nav-link" aria-current="page" href="index.html">Home</a>
           </li>
@@ -85,13 +85,22 @@
   </nav>
   <div class="container">
     <div class="page-heading text-center my-4">
-      <h1>Gallery</h1>
+      <div class="row my-5">
+        <div class="col-lg-4 d-flex align-items-center">
+          <hr class="w-100 rounded-1" style="height: 5px;">
+        </div>
+        <div class="col-lg-4">
+          <h1 class="revealdown page-heading">Gallery</h1>
+        </div>
+        <div class="col-lg-4 d-flex align-items-center">
+          <hr class="w-100 rounded-1" style="height: 5px;">
+        </div>
+      </div>
     </div>
-    <hr>
     <div class="row text-center justify-content-center mt-4">
       <div class="col-sm-4 mb-2 mb-sm-0">
         <a type="button" data-bs-toggle="modal" data-bs-target="#gufest2024" style="text-decoration: none;">
-          <div class="card border-0">
+          <div class="card border-0 item1">
             <img src="IMAGES/gallery/gufest2024/gufest2024thumbnail.jpg" style="border-radius: 5px;"
               class="card-img-top">
             <div class="card-body">
@@ -146,7 +155,7 @@
       </div>
       <div class="col-sm-4 mb-2 mb-sm-0">
         <a type="button" data-bs-toggle="modal" data-bs-target="#darkflamesmodal" style="text-decoration: none;">
-          <div class="card border-0">
+          <div class="card border-0 item2">
             <img src="IMAGES/gallery/dark-flames/darkflamesthumbnail.jpg" style="border-radius: 5px;"
               class="card-img-top">
             <div class="card-body">
@@ -202,7 +211,7 @@
       </div>
       <div class="col-sm-4 mb-2 mb-sm-0">
         <a type="button" data-bs-toggle="modal" data-bs-target="#friendshipdaymodal" style="text-decoration: none;">
-          <div class="card border-0">
+          <div class="card border-0 item3">
             <img src="IMAGES/gallery/friendship-day-2023/friendshipdaythumbnail.jpg" style="border-radius: 5px;"
               class="card-img-top">
             <div class="card-body">
@@ -258,7 +267,7 @@
       </div>
       <div class="col-sm-4 mb-2 mb-sm-0">
         <a type="button" data-bs-toggle="modal" data-bs-target="#saharamodal" style="text-decoration: none;">
-          <div class="card border-0">
+          <div class="card border-0 item1">
             <img src="IMAGES/gallery/sahara-slum-visit/saharathumbnail.jpg" style="border-radius: 5px;"
               class="card-img-top">
             <div class="card-body">
@@ -266,7 +275,7 @@
             </div>
           </div>
         </a>
-        <!-- Friendship Day Modal -->
+        <!-- Sahara Modal -->
         <div class="modal fade" id="saharamodal" tabindex="-1" aria-labelledby="saharamodalLabel" aria-hidden="true">
           <button type="button" class="btn-close position-fixed top-0 end-0 p-3" data-bs-dismiss="modal"
             aria-label="Close"></button>
@@ -307,7 +316,7 @@
       </div>
       <div class="col-sm-4 mb-2 mb-sm-0">
         <a type="button" data-bs-toggle="modal" data-bs-target="#impulsomodal" style="text-decoration: none;">
-          <div class="card border-0">
+          <div class="card border-0 item2">
             <img src="IMAGES/gallery/impulso-2023/impulsothumbnail.jpg" style="border-radius: 5px;"
               class="card-img-top">
             <div class="card-body">
@@ -353,7 +362,7 @@
       </div>
       <div class="col-sm-4 mb-2 mb-sm-0">
         <a type="button" data-bs-toggle="modal" data-bs-target="#worldnaturemodal" style="text-decoration: none;">
-          <div class="card border-0">
+          <div class="card border-0 item3">
             <img src="IMAGES/gallery/worldnatureconservationday/worldnaturethumbnail.jpg" style="border-radius: 5px;"
               class="card-img-top">
             <div class="card-body">
@@ -464,6 +473,63 @@
     </div>
     <!-- Copyright -->
   </footer>
+  <script>
+    var slideUp = {
+      distance: '150%',
+      origin: 'top',
+      opacity: null,
+    };
+    var slideDown = {
+      distance: '150%',
+      origin: 'bottom',
+      opacity: null,
+    };
+    var slideRight = {
+      distance: '150%',
+      origin: 'right',
+      opacity: null,
+    };
+    var slideLeft = {
+      distance: '150%',
+      origin: 'left',
+      opacity: null,
+    };
+    var slideLeftd1 = {
+      distance: '150%',
+      origin: 'left',
+      opacity: null,
+      delay: 100,
+    };
+    var item1 = {
+      distance: '150%',
+      origin: 'bottom',
+      opacity: 0,
+      delay: 500,
+    };
+    var item2 = {
+      distance: '150%',
+      origin: 'bottom',
+      opacity: 0,
+      delay: 600,
+    };
+    var item3 = {
+      distance: '150%',
+      origin: 'bottom',
+      opacity: 0,
+      delay: 700,
+    };
+
+    ScrollReveal().reveal('.revealup', slideUp);
+    ScrollReveal().reveal('.revealdown', slideDown);
+    ScrollReveal().reveal('.revealright', slideRight);
+    ScrollReveal().reveal('.revealleft', slideLeft);
+    ScrollReveal().reveal('.navbar', { delay: 250 });
+    ScrollReveal().reveal('.item1', item1);
+    ScrollReveal().reveal('.item2', item2);
+    ScrollReveal().reveal('.item3', item3);
+    ScrollReveal().reveal('.landingimage', { delay: 2500 });
+    ScrollReveal().reveal('.revealleftd1', slideLeftd1);
+  </script>
 </body>
 
 </html>
