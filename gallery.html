@@ -27,6 +27,7 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
   <!-- External CSS -->
   <link rel="stylesheet" href="commonstyles.css">
+  <script src="script.js"></script>
   <style>
     .card img {
       transition: transform 0.3s ease;
@@ -477,63 +478,9 @@
     </div>
     <!-- Copyright -->
   </footer>
-  <script>
-    var slideUp = {
-      distance: '150%',
-      origin: 'top',
-      opacity: null,
-    };
-    var slideDown = {
-      distance: '150%',
-      origin: 'bottom',
-      opacity: null,
-    };
-    var slideRight = {
-      distance: '150%',
-      origin: 'right',
-      opacity: null,
-    };
-    var slideLeft = {
-      distance: '150%',
-      origin: 'left',
-      opacity: null,
-    };
-    var slideLeftd1 = {
-      distance: '150%',
-      origin: 'left',
-      opacity: null,
-      delay: 100,
-    };
-    var item1 = {
-      distance: '150%',
-      origin: 'bottom',
-      opacity: 0,
-      delay: 500,
-    };
-    var item2 = {
-      distance: '150%',
-      origin: 'bottom',
-      opacity: 0,
-      delay: 600,
-    };
-    var item3 = {
-      distance: '150%',
-      origin: 'bottom',
-      opacity: 0,
-      delay: 700,
-    };
-
-    ScrollReveal().reveal('.revealup', slideUp);
-    ScrollReveal().reveal('.revealdown', slideDown);
-    ScrollReveal().reveal('.revealright', slideRight);
-    ScrollReveal().reveal('.revealleft', slideLeft);
-    ScrollReveal().reveal('.navbar', { delay: 250 });
-    ScrollReveal().reveal('.item1', item1);
-    ScrollReveal().reveal('.item2', item2);
-    ScrollReveal().reveal('.item3', item3);
-    ScrollReveal().reveal('.landingimage', { delay: 2500 });
-    ScrollReveal().reveal('.revealleftd1', slideLeftd1);
-  </script>
+  <!-- Cursor Element -->
+  <div class="cursor"></div>
+  <script src="reveal.js"></script>
 </body>
 
 </html>

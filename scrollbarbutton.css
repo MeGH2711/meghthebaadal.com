@@ -5,16 +5,16 @@
 
 /* Track */
 ::-webkit-scrollbar-track {
-    box-shadow: inset 0 0 10px rgb(135, 134, 134);
+    box-shadow: inset 0 0 5px grey;
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-    background: rgb(37, 35, 35);
-    border-radius: 3px;
+    background: #888;
+    border-radius: 10px;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-    background: rgb(46, 42, 42);
+    background: #555;
 }

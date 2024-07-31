@@ -1,73 +1,32 @@
-// Type Writer Script Start
-var TxtType = function (el, toRotate, period) {
-    this.toRotate = toRotate;
-    this.el = el;
-    this.loopNum = 0;
-    this.period = parseInt(period, 10) || 2000;
-    this.txt = '';
-    this.tick();
-    this.isDeleting = false;
-};
+// Cursor
+document.addEventListener('DOMContentLoaded', () => {
+    const cursor = document.querySelector('.cursor');
 
-TxtType.prototype.tick = function () {
-    var i = this.loopNum % this.toRotate.length;
-    var fullTxt = this.toRotate[i];
+    document.addEventListener('mousemove', (e) => {
+        cursor.style.left = `${e.pageX - cursor.offsetWidth / 2}px`;
+        cursor.style.top = `${e.pageY - cursor.offsetHeight / 2}px`;
+    });
 
-    if (this.isDeleting) {
-        this.txt = fullTxt.substring(0, this.txt.length - 1);
-    } else {
-        this.txt = fullTxt.substring(0, this.txt.length + 1);
-    }
+    document.addEventListener('mouseover', (e) => {
+        const hoveredElement = e.target;
+        const bgColor = window.getComputedStyle(hoveredElement).backgroundColor;
 
-    this.el.innerHTML = '<span class="wrap">' + this.txt + '</span>';
-
-    var that = this;
-    var delta = 200 - Math.random() * 100;
-
-    if (this.isDeleting) { delta /= 2; }
-
-    if (!this.isDeleting && this.txt === fullTxt) {
-        delta = this.period;
-        this.isDeleting = true;
-    } else if (this.isDeleting && this.txt === '') {
-        this.isDeleting = false;
-        this.loopNum++;
-        delta = 500;
-    }
-
-    setTimeout(function () {
-        that.tick();
-    }, delta);
-};
-
-window.onload = function () {
-    var elements = document.getElementsByClassName('typewrite');
-    for (var i = 0; i < elements.length; i++) {
-        var toRotate = elements[i].getAttribute('data-type');
-        var period = elements[i].getAttribute('data-period');
-        if (toRotate) {
-            new TxtType(elements[i], JSON.parse(toRotate), period);
+        if (bgColor === 'rgba(0, 0, 0, 0)' || bgColor === 'transparent') {
+            cursor.style.backgroundColor = '#fff'; // Default to white for transparent elements
+        } else {
+            cursor.style.backgroundColor = invertColor(bgColor);
         }
-    }
+    });
+});
 
-    // INJECT CSS
-    var css = document.createElement("style");
-    css.type = "text/css";
-    css.innerHTML = `
-      .typewrite > .wrap {
-        border-right: 0.08em solid #fff;
-        animation: blink 0.7s infinite;
-      }
-      
-      @keyframes blink {
-        0%, 100% {
-          border-color: transparent;
-        }
-        50% {
-          border-color: #fff;
-        }
-      }
-    `;
-    document.body.appendChild(css);
-};
-// Typerwriter Script End
+function invertColor(rgb) {
+    // Extract RGB values from "rgb(r, g, b)" string
+    const rgbValues = rgb.match(/\d+/g);
+    if (!rgbValues) return '#000000'; // Default to black if no match found
+
+    const r = 255 - parseInt(rgbValues[0]);
+    const g = 255 - parseInt(rgbValues[1]);
+    const b = 255 - parseInt(rgbValues[2]);
+
+    return `rgb(${r},${g},${b})`;
+}
