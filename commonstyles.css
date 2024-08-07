@@ -62,6 +62,14 @@ body {
     box-shadow: 0 1px 10px rgba(0, 0, 0, 0.9);
 }
 
+.nav-link {
+    transition: ease-in 0.1s;
+}
+
+.nav-link:hover {
+    scale: 1.05;
+}
+
 /* Fonts Sizing */
 
 .section-heading {
