@@ -46,11 +46,12 @@
             padding: 0.6rem 1.5rem;
             font-weight: 500;
             transition: background-color 0.3s ease;
+            cursor: default;
+            pointer-events: none;
         }
 
         .btn-redirect:hover {
             background-color: #2e2e2e;
-            color: white;
         }
     </style>
 </head>
@@ -58,9 +59,24 @@
 <body>
     <div class="redirect-container">
         <h1>Portfolio Upgraded</h1>
-        <p>The destination for this portfolio has changed.<br>Please visit the new link below.</p>
-        <a href="https://meghportfolio.netlify.app/" class="btn btn-redirect">Go to New Portfolio</a>
+        <p>The destination for this portfolio has changed.<br>Redirecting you shortly...</p>
+        <button id="redirectBtn" class="btn btn-redirect">Redirecting in 5s...</button>
     </div>
+
+    <script>
+        const newURL = "https://meghportfolio.netlify.app/";
+        let countdown = 5;
+        const button = document.getElementById("redirectBtn");
+
+        const timer = setInterval(() => {
+            countdown--;
+            button.textContent = `Redirecting in ${countdown}s...`;
+            if (countdown === 0) {
+                clearInterval(timer);
+                window.location.href = newURL;
+            }
+        }, 1000);
+    </script>
 </body>
 
 </html>
