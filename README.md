@@ -27,7 +27,7 @@ This portfolio is not just a static website—it represents my journey as a deve
 Whether you’re a recruiter looking for talent, a client interested in my services, or a fellow developer seeking collaboration, feel free to browse through my work and reach out!
 ## 🌐 Live Demo
 
-The portfolio website is live and can be accessed here : https://megh2711.github.io/meghthebaadal.com/ or https://meghthebaadal.netlify.app/
+The portfolio website is live and can be accessed here : https://meghportfolio.netlify.app/
 ## 🤝 Contributions
 
 While this is a personal portfolio, I am always open to constructive feedback and improvements. Feel free to open an issue or submit a pull request if you see any enhancements!
