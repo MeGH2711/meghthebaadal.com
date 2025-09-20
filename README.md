@@ -37,7 +37,7 @@ While this is a personal portfolio, I am always open to constructive feedback an
 
 If you have any questions, feedback, or would like to collaborate, you can reach me at:
 
-Email: patelmeghmahesh@gmail.com
+Email: patelmeghmahesh2701@gmail.com
 
 LinkedIn: https://www.linkedin.com/in/meghpatel2711/
 
